@@ -1,0 +1,42 @@
+<div class="back"></div>
+<div class="container">
+  <div class="row" style="height:40px"></div>
+  <div class="row">
+    <div *ngIf="favouriteActivities.length > 0" class="quicksand row margin-10 mat-headline highlight">
+      <span class="box">Favourites</span>
+    </div>
+    <div class="row" style="padding: 10px">
+      <div *ngFor="let activity of favouriteActivities" class="col-6 col-sm-3">
+      </div>
+    </div>
+    <div class="row" style="height: 30px"></div>
+    <div class="row">
+      <div class="quicksand row margin-10 mat-headline highlight">
+        <span class="box">All Activities</span>
+      </div>
+      <div class="d-flex flex-grow-1 flex-auto"></div>
+    </div>
+    <div class="row" style="padding: 10px">
+      <div *ngFor="let activity of allActivities; let i=index" class="col-6 col-sm-4" style="padding: 10px">
+        <mat-card class="mat-elevation-z22 h-100 radius-20">
+          <button (click)="addToFavourites(i)" mat-mini-fab
+                  style="position: absolute; top: 15px; right: 15px; background-color: white">
+            <mat-icon>favorite_border</mat-icon>
+          </button>
+          <button (click)="goToDetails(i)" mat-mini-fab style="position: absolute; bottom: 15px; right: 15px;">
+            <mat-icon>arrow_forward</mat-icon>
+          </button>
+          <div class="container">
+            <div class="row">
+              <div class="quicksand mat-h2">
+                {{activity.name}}
+              </div>
+              <div class="d-flex flex-grow-1 flex-auto"></div>
+            </div>
+            <img [src]="activity.image" class="w-100">
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

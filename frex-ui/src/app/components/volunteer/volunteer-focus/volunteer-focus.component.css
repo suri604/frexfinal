@@ -1,0 +1,62 @@
+.card{
+  border-radius: 20px;
+  /*background-color: #bd4f6c;*/
+/*background-image :linear-gradient(326deg, #bd4f6c 0%, #d7816a 74%);*/
+}
+.avatar{
+  height: 50px;
+  border-radius: 50%;
+}
+.fill-remaining{
+  border: 1px;
+  height: available;
+}
+.imgx{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.fill-remaining-space{
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+.box{
+  background-color: #ffecb3;
+  padding: 8px;
+  border-radius: 16px;
+}
+.cardfocus:hover h2{
+  opacity: 1;
+  cursor:pointer;
+}
+.cardfocus:hover img{
+   opacity: 0;
+   cursor:pointer;
+}
+.cardfocus:hover {
+   box-shadow: 5px 5px 20px 5px #F06292;
+
+}
+
+
+.cardfocus h2{
+   opacity:0;
+   position: absolute;
+   /* bottom: 2%; */
+   width:100%;
+   /* z-index: 100; */
+   text-align: left;
+   font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size:23px;
+}
+.h-100{
+  /* background-color: #bd4f6c;
+background-image :linear-gradient(326deg, #bd4f6c 0%, #d7816a 74%); */
+/*background-color: #bd4f6c;*/
+/*background-image :linear-gradient(326deg, #bd4f6c 0%, #d7816a 74%);*/
+
+}
+
+.row{
+  /*background-color: #bd4f6c;*/
+/*background-image :linear-gradient(326deg, #bd4f6c 0%, #d7816a 74%);*/
+}

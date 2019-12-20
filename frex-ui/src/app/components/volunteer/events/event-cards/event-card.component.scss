@@ -1,0 +1,31 @@
+.main_container {
+  margin-top: 10px;
+  margin-left: 180px;
+  .content_container {
+    display: inline;
+    .list {
+      float: left;
+      .card-img-top {
+        height: 120px;
+        width: 100px;
+        background-image:
+          url('../../../../../assets/img/event.jpeg');
+      }
+    }
+
+    .left {
+      float: left;
+      margin-top: 140px;
+    }
+
+    .right {
+      float: left;
+      margin-top: 140px;
+    }
+  }
+}
+.card-deck{
+  height:300px;
+  width:300px;
+  margin-left: 20px;
+}

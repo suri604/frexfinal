@@ -1,0 +1,12 @@
+<div class="container-fluid h-100">
+    <div class="row h-100">
+      <div *ngIf="navigated" class="col">
+        <app-photograpy-dashboard [isSmall]="isSmall" [(navigated)]="navigated"></app-photograpy-dashboard>
+      </div>
+      <div *ngIf="isSmall || !navigated" class="col-xl-5 col">
+        <app-photography-focus [(navigated)]="navigated"></app-photography-focus>
+      </div>
+    </div>
+  </div>
+  <div class="back"></div>
+  

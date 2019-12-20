@@ -1,0 +1,46 @@
+<div class="h-100" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px">
+    <mat-card class="card mat-elevation-z24" style="height: 100%;">
+      <!-- <div class="container h-100"> -->
+        <div class="row">
+          <button mat-icon-button *ngIf="!navigated" (click)="onBackPressed()"><mat-icon>arrow_back</mat-icon></button>
+          <button mat-flat-button>Profile</button>
+          <button mat-flat-button>Settings</button>
+          <div class="d-flex flex-grow-1"></div>
+          <img class="avatar" src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar">
+        </div>
+        <div class="row" style="height: 20px"></div>
+        <div class="quicksand row margin-10 mat-headline highlight">
+          <span class="box">Your Activities</span>
+        </div>
+        <div class="row justify-content-center">
+          <div *ngFor="let activity of actitivites" class="col-10 col-sm-3 col-xs-6">
+            <div class="h-100" style="padding: 10px">
+              <mat-card (click)="goToDetails()" matRipple class="radius-20 d-flex flex-column cardfocus h-100 mat-elevation-z12">
+                <img class="img-fluid card-img" [src]="activity.img">
+                <div class="row flex-grow-1 fill-remaining-space"></div>
+                <h2>{{activity.title}}</h2>
+
+                <!-- <div class="mat-h3 quicksand margin-10"></div> -->
+              </mat-card>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="height: 20px"></div>
+        <div class="quicksand row margin-10 mat-headline highlight">
+          <span class="box">Dashboards</span>
+        </div>
+        <div class="row justify-content-center">
+          <div *ngFor="let action of actions" class="col-10 col-sm-4 col-xs-4">
+            <div (click)="clicker(action.title)" class="h-100" style="padding: 10px">
+              <mat-card [ngStyle]="{'background-color': action.color}" matRipple class="radius-20 d-flex flex-column cardfocus h-100 mat-elevation-z12">
+                <img class="img-fluid card-img" [src]="action.img">
+                <div class="row flex-grow-1 fill-remaining-space"></div>
+                <h2>{{action.title}}</h2>
+                <!-- <div class="mat-h3 quicksand margin-10">{{action.title}}</div> -->
+              </mat-card>
+            </div>
+          </div>
+        </div>
+      <!-- </div> -->
+    </mat-card>
+  </div>

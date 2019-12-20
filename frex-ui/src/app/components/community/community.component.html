@@ -1,0 +1,162 @@
+<div class="main">
+  
+  <div class="top3">
+    <div class="two item">
+      <div class="pos">
+        2
+      </div>
+      <div class="pic" style="background-image: url('https://randomuser.me/api/portraits/men/44.jpg&')"></div>
+      <div class="name">
+        Rohit Sharma
+      </div>
+      <div class="score">
+        6453
+      </div>
+    </div>
+    <div class="one item">
+      <div class="pos">
+        1
+      </div>
+      <div class="pic" style="background-image: url(&#39;https://randomuser.me/api/portraits/men/31.jpg&#39;)"></div>
+      <div class="name">
+        Virat   kohli
+      </div>
+      <div class="score">
+        6794
+      </div>
+    </div>
+
+    <div class="three item">
+      <div class="pos">
+        3
+      </div>
+      <div class="pic" style="background-image: url(&#39;https://randomuser.me/api/portraits/women/91.jpg&#39;)"></div>
+      <div class="name">
+        Marvan Attapattu
+      </div>
+      <div class="score">
+        6034
+      </div>
+    </div>
+
+
+  </div>
+
+  <mat-grid-list cols="8" rowHeight="60vw">
+
+
+    <mat-grid-tile [colspan]="8" [rowspan]="1">
+      <figure class="mat-fig">
+        <div class="user_content" style="width: 100%;">
+
+          <mat-tab-group dynamicHeight mat-stretch-tabs>
+            <mat-tab label="Overall Performance">
+
+
+                            </mat-tab>
+            <mat-tab label="Environment">
+              <div *ngFor="let i of rewards;index as ind">
+                <div class="list">
+                  <br>
+                  <div class="item">
+                    <div class="pos">
+                       {{ind+1}}
+                    </div>
+                    <div class="pic"
+                      style="background-image: url(&#39;{{front}}+{{i.username}}+{{back}}&#39;)"></div>
+                    <div class="name">
+                      {{i.username}}
+                    </div>
+                    <div class="row green-text" *ngIf="i.performance>0;else negative">
+                      <div class="margin-vert-auto margin-horiz-auto mat-h3">{{i.performance}}%</div>
+                      <mat-icon class="fa-rotate-270 green-text margin-horiz-auto margin-vert-auto text"
+                        style="height: 20px">
+                        trending_flat
+                      </mat-icon>
+                    </div>
+                    <ng-template #negative>
+                        <div class="row red-text">
+                            <div class="margin-vert-auto margin-horiz-auto mat-h3">{{i.performance}}% </div>
+                            <mat-icon class="red-text fa-rotate-90 margin-vert-auto text" style="height: 20px">
+                              trending_flat
+                            </mat-icon>
+                          </div>
+                    </ng-template>
+                    
+                    <div class="score">
+                      {{i.xps}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </mat-tab>
+            <mat-tab label="Fitness">
+              <div *ngFor="let i of fitnesRewards;index as ind">
+                <div class="list">
+                  <br>
+                  <div class="item">
+                    <div class="pos">
+                       {{ind+1}}
+                    </div>
+                    <div class="pic"
+                      style="background-image: url(&#39;https://randomuser.me/api/portraits/men/88.jpg&#39;)"></div>
+                    <div class="name">
+                      {{i.username}}
+                    </div>
+                    <div class="row green-text" *ngIf="i.performance>0;else negative">
+                      <div class="margin-vert-auto margin-horiz-auto mat-h3">{{i.performance}}%</div>
+                      <mat-icon class="fa-rotate-270 green-text margin-horiz-auto margin-vert-auto text"
+                        style="height: 20px">
+                        trending_flat
+                      </mat-icon>
+                    </div>
+                    <ng-template #negative>
+                        <div class="row red-text">
+                            <div class="margin-vert-auto margin-horiz-auto mat-h3">{{i.performance}}% </div>
+                            <mat-icon class="red-text fa-rotate-90 margin-vert-auto text" style="height: 20px">
+                              trending_flat
+                            </mat-icon>
+                          </div>
+                    </ng-template>
+                    
+                    <div class="score">
+                      {{i.points}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+                  </mat-tab>
+            <mat-tab label="Photography">
+              <div *ngFor="let i of everydayRewards;index as ind">
+                <div class="list">
+                  <br>
+                  <div class="item">
+                    <div class="pos">
+                       {{ind+1}}
+                    </div>
+                    <div class="pic"
+                      style="background-image: url(&#39;https://randomuser.me/api/portraits/men/88.jpg&#39;)"></div>
+                    <div class="name">
+                      {{i.username}}
+                    </div>
+                    
+                    <div class="score">
+                      {{i.points}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </mat-tab>
+             </mat-tab-group>
+
+
+        </div>
+      </figure>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+</div>
+<div class="bg"></div>
+

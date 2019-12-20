@@ -1,0 +1,15 @@
+.back{
+  z-index: -1;
+  height: 100%;
+  width:100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  background-color: #673ab7;
+  background-image: linear-gradient(to bottom right, #673AB7, #9C27B0);
+}
+.line{
+  margin: auto 8px;
+}
+
+

@@ -1,0 +1,11 @@
+<div class="container-fluid h-100">
+  <div class="row h-100">
+    <div *ngIf="navigated" class="col">
+      <app-fitness-dashboard [isSmall]="isSmall" [(navigated)]="navigated"></app-fitness-dashboard>
+    </div>
+    <div *ngIf="isSmall || !navigated" class="col-xl-5 col">
+      <app-fitness-focus [(navigated)]="navigated"></app-fitness-focus>
+    </div>
+  </div>
+</div>
+<div class="back"></div>

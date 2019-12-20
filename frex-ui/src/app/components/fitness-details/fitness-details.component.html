@@ -1,0 +1,239 @@
+<div class="container-fluid h-100">
+  <div class="row h-100 justify-content-center">
+    <!--      Main Card-->
+    <div class="col-12 h-100">
+      <div class="h-100 card-padding">
+        <mat-card class="card-border mat-elevation-z22 d-flex flex-auto flex-column" style="margin-bottom: 40px">
+          <div class="d-flex flex-grow-1 h-100 flex-fill">
+            <!--            Horizontal bar-->
+            <div class="horizontal-bar h-100 flex-auto flex-column flex-grow-1 d-flex">
+              <div style="height: 10px"></div>
+              <a mat-icon-button class="no-outline" (click)="back()">
+                <mat-icon>arrow_back</mat-icon>
+              </a>
+              <div style="margin-top: 200px">
+                <a mat-mini-fab class="no-outline" matTooltip="Environment Freaks"
+                   style="background-color: #1B5E20; color: white" (click)="gotoEnvironment()">
+                  <mat-icon>eco</mat-icon>
+                </a>
+                <div class="row" style="height: 20px"></div>
+                <a mat-mini-fab class="no-outline" matTooltip="Volunteer Freaks"
+                   style="background-color: #006064; color: white" (click)="gotoVolunteer()">
+                  <mat-icon>spa</mat-icon>
+                </a>
+                <div class="row" style="height: 20px"></div>
+                <a mat-mini-fab class="no-outline" matTooltip="Photography Freaks" (click)="gotoPhotography()"
+                   style="background-color: #880E4F; color: white">
+                  <mat-icon>photo</mat-icon>
+                </a>
+              </div>
+            </div>
+
+            <!--            Details Card-->
+            <div class="body-details h-100 w-100 mat-elevation-z20">
+              <div class="row h-100">
+                <!--                Activity details-->
+                <div class="h-100 col">
+                  <!--                  Toolbar-->
+                  <div class="row justify-content-center" style="margin: 20px">
+                    <button matTooltip="Share" mat-mini-fab class="no-outline primary">
+                      <mat-icon style="transform: rotateY(180deg)">reply</mat-icon>
+                    </button>
+                    <div class="d-flex flex-grow-1"></div>
+                    <button matTooltip="Notifications" matBadgeColor="accent" mat-mini-fab matBadge="2"
+                            class="no-outline primary" [matMenuTriggerFor]="appMenu1">
+                      <mat-icon>notifications</mat-icon>
+                    </button>
+
+                    <div style="width:20px"></div>
+                    <div class="mat-subheader quicksand font-weight-bold" style="margin: auto 10px auto auto;">
+                      Pushkar Saraf
+                    </div>
+                    <img matRipple matTooltip="Profile" class="avatar mat-elevation-z10"
+                         src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar">
+                  </div>
+                  <div class="row" style="height: 20px"></div>
+                  <!--                  Main Content-->
+                  <div class="row" style="margin-left: 20px; margin-right: 10px;">
+                    <div class="col">
+                      <mat-card class="mat-elevation-z0 radius-20">
+                        <div class="row" style="margin: 10px">
+                          <div class="quicksand mat-h2 font-weight-bolder">{{activity}} Details</div>
+                        </div>
+                        <div class="row w-100">
+                          <google-chart class="w-100" [data]="rewardsChart"></google-chart>
+                        </div>
+                      </mat-card>
+                    </div>
+                  </div>
+                  <div class="height-40"></div>
+                  <div class="row" style="margin-left: 20px; margin-right: 10px; margin-bottom: 40px">
+                    <div class="col">
+                      <mat-card class="mat-elevation-z0 radius-20">
+                        <div class="row" style="margin: 10px 10px 5px;">
+                          <div class="quicksand mat-h2 font-weight-bolder">Claim rewards for today!</div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <mat-card class="h-100 mat-elevation-z22 radius-20">
+                              <div class="quicksand font-weight-bolder mat-h3">
+                                Claim Rewards
+                              </div>
+                              <div class="quicksand mat-h4">
+                                Lets go!
+                              </div>
+                              <button class="no-outline" mat-mini-fab
+                                      style="position: absolute; right: 15px; top: 15px" (click)="showRewardsDialog()">
+                                <mat-icon>
+                                  arrow_forward
+                                </mat-icon>
+                              </button>
+                              <img src="../../../assets/gift.svg" class="w-100">
+                            </mat-card>
+                          </div>
+                          <div class="col">
+                            <mat-card class="h-100 bg-3 mat-elevation-z22 text-white radius-20">
+                              <div (click)="refresh()" class="row">
+                                <div class="quicksand mat-h2 font-weight-bolder">
+                                  Today's Achievements!
+                                </div>
+                                <div class="d-flex flex-grow-1 flex-auto"></div>
+                                <button mat-mini-fab class="no-outline" style="margin: 10px; background-color: #5f0a87">
+                                  <mat-icon>refresh</mat-icon>
+                                </button>
+                              </div>
+                              <div class="quicksand mat-h4 font-weight-bold">
+                                Steps: {{steps}}
+                                <br/>
+                                Calories burned: {{calories}}
+                                <br/>
+                                Streak Day: 1
+                                <br/>
+                                Goals Unlocked: 0
+                              </div>
+                              <img class="w-100" src="../../../assets/targets.svg">
+                              <button mat-mini-fab color="accent" class="no-outline"
+                                      style="position: absolute; right: 10px; bottom: 10px; ">
+                                <mat-icon>bubble_chart</mat-icon>
+                              </button>
+                            </mat-card>
+                          </div>
+                        </div>
+                      </mat-card>
+                    </div>
+                  </div>
+                </div>
+                <!--                Aggregate Details-->
+                <div class="d-none d-md-block d-xl-block d-lg-block col-sm-4">
+                  <mat-card class="h-100 round-20 mat-elevation-z10">
+                    <div class="container-fluid h-100" style="display: flex;flex-flow: column;">'
+                      <!--                      Secondary Toolbar-->
+                      <div class="row justify-content-center">
+                        <div class="quicksand mat-h2 font-weight-bold" style="margin: auto 10px auto auto;">More
+                          Activities
+                        </div>
+                        <div class="d-flex flex-grow-1 flex-auto"></div>
+                        <button mat-icon-button class="no-outline" [mat-menu-trigger-for]="appMenu">
+                          <mat-icon>more_vert</mat-icon>
+                        </button>
+                      </div>
+                      <div class="row" style="height: 20px"></div>
+                      <!--                      Navigate to other activities-->
+                      <div class="row">
+                        <div class="col" (click)="changeActivityId(1)" *ngIf="activityId!=='1'">
+                          <mat-card matTooltip="Jogging" matRipple class="h-100 mat-elevation-z16 radius-20 bg-0">
+                            <img src="../../../assets/running2.svg" class="w-100 h-100" alt="biking image">
+                          </mat-card>
+                        </div>
+                        <div class="col" (click)="changeActivityId(2)" *ngIf="activityId!=='2'">
+                          <mat-card matTooltip="Biking" matRipple class="h-100 mat-elevation-z16 radius-20 bg-1">
+                            <img src="../../../assets/biking2.svg" class="w-100" alt="biking image">
+                          </mat-card>
+                        </div>
+                        <div class="col" (click)="changeActivityId(3)" *ngIf="activityId!=='3'">
+                          <mat-card matTooltip="Other Activities" matRipple
+                                    class="h-100 mat-elevation-z16 radius-20 bg-2">
+                            <img src="../../../assets/others2.svg" class="w-100 h-100" alt="biking image">
+                          </mat-card>
+                        </div>
+                      </div>
+                      <div class="row" style="height: 40px"></div>
+                      <!--                      Agg Details and trends-->
+                      <div style="flex:1">
+                        <mat-card class="h-100 round-20 bg-grey mat-elevation-z0">
+                          <div class="container-fluid">
+                            <mat-card class="radius-20 bg-3 mat-elevation-z24">
+                              <div class="container-fluid">
+                                <div class="row">
+                                  <div class="mat-h3 quicksand font-weight-bolder text-white"
+                                       style="margin-top: auto; margin-bottom: auto">
+                                    Monthly Review
+                                  </div>
+                                  <div class="d-flex flex-grow-1 flex-auto"></div>
+                                  <button class="no-outline text-white" mat-icon-button matTooltip="more info">
+                                    <mat-icon>book</mat-icon>
+                                  </button>
+                                </div>
+                                <div class="mat-subheading-1 quicksand text-white margin-5"><b
+                                  class="text-accent">{{rewards}}</b> Freak Points
+                                </div>
+                                <div class="mat-subheading-2 quicksand text-white margin-5"><b
+                                  class="text-accent">{{calories}}</b> Calories
+                                </div>
+                              </div>
+                            </mat-card>
+                            <div class="row" style="height: 30px"></div>
+                            <div class="row">
+                              <div class="mat-h2 quicksand margin-vert-auto">Points</div>
+                              <div class="d-flex flex-grow-1 flex-auto"></div>
+                              <div class="row green-text">
+                                <div class="margin-vert-auto margin-horiz-auto mat-h3">+{{increase}}%</div>
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="mat-h2 quicksand margin-vert-auto">Calorie goal</div>
+                              <div class="d-flex flex-grow-1 flex-auto"></div>
+                              <div class="row green-text">
+                                <div class="margin-vert-auto margin-horiz-auto mat-h3">+{{increase}}%</div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="mat-h2 quicksand margin-vert-auto">Longest Streak</div>
+                              <div class="d-flex flex-grow-1 flex-auto"></div>
+                              <div class="row blue-text">
+                                <div class="margin-vert-auto margin-horiz-auto mat-h3" style="margin-right: 10px">1
+                                  day
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row justify-content-end align-content-end">
+                              <button mat-flat-button color="accent" (click)="goToLeaderBoard()">More Trends</button>
+                            </div>
+                          </div>
+                        </mat-card>
+                      </div>
+                      <div class="row" style="height: 20px"></div>
+                    </div>
+                  </mat-card>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+<!--User Menu-->
+<mat-menu #appMenu="matMenu">
+  <button mat-menu-item>Settings</button>
+  <button mat-menu-item (click)="linkWithGoogleFit()">Link with google fit</button>
+  <button mat-menu-item>Log Out</button>
+</mat-menu>
+<!--Notifications Menu-->
+<mat-menu #appMenu1="matMenu">
+  <button mat-menu-item>Welcome!</button>
+  <button mat-menu-item>Complete your goals!</button>
+</mat-menu>
+<div class="back"></div>

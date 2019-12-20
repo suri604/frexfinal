@@ -1,0 +1,26 @@
+<div *ngIf="displayNavBar" style="position: sticky; top: 0; z-index: 5">
+  <mat-toolbar style="color: white; background-color: transparent ">
+    <div (click)="home()" class="quicksand font-weight-bolder no-outline mat-headline margin-vert-auto"
+         style="background-color: #0006; padding: 10px; border-radius: 10px">Frex
+    </div>
+    <div class="d-flex flex-grow-1 flex-auto"></div>
+    <button mat-button class="no-outline font-weight-bolder quicksand" *ngIf="logged" style="background-color: #0006"
+            routerLink="globaldashboard">Global Dashboard</button>
+    <div style="width:5px"></div>
+    <button mat-button class="no-outline font-weight-bolder quicksand" *ngIf="logged"
+            style="background-color: #0006" [matMenuTriggerFor]="account">{{username}}</button>
+    <button mat-flat-button class="no-outline font-weight-bolder quicksand" style="background-color:#0006; color: white"
+            *ngIf="!logged" [matMenuTriggerFor]="signIn">
+      Start Freaking!
+    </button>
+  </mat-toolbar>
+  <mat-divider></mat-divider>
+</div>
+<mat-menu #signIn="matMenu">
+  <a mat-menu-item class="quicksand" routerLink="/login">Login</a>
+  <a mat-menu-item class="quicksand" routerLink="/register">Sign Up</a>
+</mat-menu>
+<mat-menu #account="matMenu">
+  <a mat-menu-item (click)="gotoaccount()">My account</a>
+  <a mat-menu-item (click)="logout()">Logout</a>
+</mat-menu>

@@ -1,0 +1,353 @@
+.main {
+  z-index: -1;
+  width: 98vw;
+  height: 100vh;
+  padding: 4vw;
+}
+
+.menu_btn{
+  display:none;
+}
+
+.bg {
+  z-index: -2;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #f8ceec;
+  background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+}
+
+
+.typed-cursor {
+  opacity: 0;
+}
+
+.back_top {
+  /* position: absolute;
+  right:0;
+  bottom:0; */
+  float: right;
+}
+
+ul {
+  float: right;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+li {
+  text-align: center;
+  color: white;
+  padding: 1vw;
+  float: left;
+  cursor: pointer;
+}
+
+li:hover {
+  text-shadow: 2px 2px 5px purple;
+}
+
+
+ul {
+  float: right;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+li {
+  text-align: center;
+  color: white;
+  padding: 1vw;
+  float: left;
+  cursor: pointer;
+}
+
+li:hover {
+  text-shadow: 2px 2px 5px purple;
+}
+
+
+.top_container {
+  height: 95%;
+  display: block;
+  background-color: #f8ceec;
+  background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+}
+
+.top_image {
+  /* position: absolute;
+  top: 20%;
+  left: 40%; */
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  height: auto;
+  /* transform: translate(-50%, -50%); */
+}
+
+.start_separator{
+  height:100px;
+}
+
+.left_div {
+  border-right: 2px solid white;
+  width: 50%;
+  height: 80%;
+  float: left;
+  margin: 1vw;
+}
+
+.right_div {
+  float: left;
+  margin: 2.5vw 1vw 1vw 5%;
+  background: white;
+  width: 40%;
+  height: 80%;
+  border-radius: 0.5vw;
+  box-shadow: 3px 3px 8px 5px #888888;
+
+}
+
+.right_div_center {
+  width: 80%;
+  height: 95%;
+  margin: 0 auto;
+  display: block;
+  /* background: red; */
+  position: relative;
+}
+
+.right_div_inner {
+  width: 38%;
+  height: 38%;
+  background: white;
+  border-radius: 0.5vw;
+  float: left;
+  margin: 1.6vw;
+  box-shadow: 3px 3px 8px 5px #888888;
+  position: relative;
+}
+
+.right_div_inner:hover {
+  box-shadow: 3px 3px 8px 5px #1e0eff;
+}
+
+.right_div_inner > .internal_logo {
+  max-height: 90%;
+  max-width: 90%;
+  margin: 1vw;
+  cursor: pointer;
+}
+
+
+.right_div_inner > p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-height: 100%;
+  max-width: 100%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.right_div_inner:hover p {
+  display: block;
+  cursor: pointer;
+}
+
+.right_div_inner:hover .internal_logo {
+  display: none;
+  cursor: pointer;
+}
+
+
+.mat-raised-button {
+  display: block;
+  margin: 0 auto;
+  color: purple;
+}
+
+.typed-strings, .typed-strings1 {
+  /* position: absolute;    */
+  /* display:block;
+  margin:0 auto; */
+  color: white;
+  font-size: 3vw;
+  font-family: 'Assistant', sans-serif;
+  text-align: center;
+}
+
+.typed-cursor {
+  opacity: 0;
+}
+
+.mid_content {
+  width: 100%;
+  display: block;
+  height: 700px;
+}
+
+.content_mid_top {
+  width: 100%;
+  height: 50%;
+  background: #f9faff;
+}
+
+.content_mid_top > .box_image {
+  width: 19vw;
+  height: 60%;
+  padding:1vw 1vw 0 1vw;
+  margin: 0 3vw 0 0;
+}
+
+.animation_space {
+  width: 100%;
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+.animation_space {
+  content: '';
+  /* background: red; */
+  background: url(src/assets/pro-bg.png) no-repeat bottom #f9faff;
+  background-repeat: repeat no-repeat;
+  background-size: 500px;
+  animation: animatedBackground 40s linear infinite;
+  width: 100%;
+  height: 40%;
+}
+
+/*I dont remember what this shit is*/
+.box_image {
+  width: 40%;
+  height: 90%;
+  margin: 2vw 0 0 0.2vw;
+  float: left;
+}
+
+.box_image > img {
+  width: 100%;
+  height: 100%;
+}
+
+.box_content {
+  width: 50%;
+  height: 100%;
+  margin-left: 5vw;
+  margin-top: 10%;
+  float: left;
+}
+
+/*shit ends*/
+
+.fadeInLeft .fadeInRight {
+  -webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+.top_container > h1 {
+  margin: 0 auto;
+  width: 90%;
+  color: white;
+  font-family: 'Assistant', sans-serif;
+  border-radius: 1vw;
+}
+
+
+.mat-flat-button {
+  background: purple;
+  margin: 0.5vw 0 0 1vw;
+  color: white;
+}
+
+.dot {
+  height: 3vw;
+  width: 3vw;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 3vw;
+  box-shadow: 0vw 1vw 8px #888888;
+  margin: 0 auto;
+}
+
+.circle_cont {
+  float: left;
+}
+
+.myanimation1 {
+  animation: bounceInTop;
+}
+
+.myanimation2 {
+  animation: bounceInLeft;
+}
+
+.myanimation3 {
+  animation: bounceInBottom;
+}
+
+.content {
+  font-family: 'Assistant', sans-serif;
+  margin: 0vw 0 0 3vw;
+  float: left;
+  font-size: 2vw;
+  color: white;
+}
+
+
+.right_mid {
+
+  width: 100%;
+  height: 100%;
+  background: red;
+  position: relative;
+}
+
+
+.animation_one, .animation_two, .animation_three, .animation_four {
+  opacity: 0;
+}
+
+.content_holder {
+  box-shadow: 3px 3px 8px 5px #888888;
+  background: white;
+  width: 70vw;
+  height: 30vw;
+  border-radius: 30px;
+  margin: 0 auto;
+
+}
+.content_holder> .internal_logo{
+  display: none;
+}
+
+.back_btn {
+  float: right;
+}
+
+/* .footer{
+  background:black;
+  width: 100%;
+  height:auto;
+} */

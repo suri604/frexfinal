@@ -1,0 +1,14 @@
+
+<div class="container-fluid h-100">
+        <div class="row h-100">
+          <div *ngIf="navigated" class="col">
+                <app-environment-quotes [isSmall]="isSmall" [(navigated)]="navigated"></app-environment-quotes>
+
+          </div>
+          <div *ngIf="isSmall || !navigated" class="col-xl-5 col">
+                <app-environment-dashboard-profile [(navigated)]="navigated"></app-environment-dashboard-profile>
+            </div>
+        </div>
+      </div>
+      <div class="back"></div>
+      

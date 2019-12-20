@@ -1,0 +1,78 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.height-40 {
+  height: 40px;
+}
+
+.quicksand {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.radius-20 {
+  border-radius: 20px !important;
+}
+
+.margin-10 {
+  margin-right: 10px;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: black;
+  /*background-image: linear-gradient(to bottom right, #311B92, #4A148C);*/
+  outline: 1px solid slategrey;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/*TODO put this in your component*/
+.custom-dialog-container .mat-dialog-container {
+  padding: 0 !important;
+  border-radius: 40px;
+}
+
+.mat-progress-bar.mat-accent .mat-progress-bar-buffer {
+  background-color: #ECEFF1 !important;
+}
+
+.mat-progress-bar.mat-accent .mat-progress-bar-fill::after {
+  background-color: #FF5722;
+}
+
+.no-outline {
+  outline: none;
+}
+
+
+.margin-vert-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.margin-horiz-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/**/

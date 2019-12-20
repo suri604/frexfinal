@@ -1,0 +1,73 @@
+<!-- <MatFormFieldModule (submit)="onsubmit()">
+    First name:<br>
+    <input type="text" name="firstname" [(ngModel)]="model.firstname"><br>
+    Last name:<br>
+    <input type="text" name="lastname" [(ngModel)]="model.lastname"><br>
+    Company name:<br>
+    <input type="text" name="lastname" [(ngModel)]="model.company"><br>
+    Website:<br>
+    <input type="text" name="lastname" [(ngModel)]="model.website"><br>
+    Email:<br>
+    <input type="text" name="lastname" [(ngModel)]="model.email"><br>
+    Phone:<br>
+    <input type="text" name="lastname" [(ngModel)]="model.phone"><br>
+    Country:<br>
+    <input type="text" name="lastname" [(ngModel)]="model.country"><br>
+    Number of Employees:<br>
+    <input type="text" name="lastname" [(ngModel)]="model.noofemployees"><br>
+    <br>
+    <button type="submit" class="btn btn-info pull-right">
+      <i class="fa fa-envelope-o"></i>
+      <span> Send Feedback</span>
+    </button>
+    </form>
+</MatFormFieldModule> -->
+
+<br/><br/>
+<br/>
+
+<h1 class="header">Become a partner today!</h1>
+<mat-card class="example-card">
+   
+    <img class="form-image" mat-card-image src="..//assets/partner_image.svg" alt="partner image">
+    <mat-card-content class="form-inputs">
+        <div class="example-container">
+            <mat-form-field>
+              <input matInput placeholder="First name" [(ngModel)]="model.firstname">
+            </mat-form-field>
+          
+            <mat-form-field>
+              <input matInput placeholder="Last name" [(ngModel)]="model.lastname">
+            </mat-form-field>
+          
+            <mat-form-field>
+                <input matInput placeholder="Company" [(ngModel)]="model.company">
+            </mat-form-field>
+        
+            <mat-form-field>
+                <input matInput placeholder="Website" [(ngModel)]="model.website">
+            </mat-form-field>
+          
+            <mat-form-field>
+                <input matInput placeholder="Email" [(ngModel)]="model.email">
+            </mat-form-field>
+        
+            <mat-form-field>
+                <input matInput placeholder="Phone" [(ngModel)]="model.phone">
+            </mat-form-field>
+        
+            <mat-form-field>
+                <input matInput placeholder="Country" [(ngModel)]="model.country">
+            </mat-form-field>
+        
+            <mat-form-field>
+                <input matInput placeholder="No. of employees" [(ngModel)]="model.noofemployees">
+            </mat-form-field>
+            <button mat-raised-button color="primary" (click)="onsubmit()">Submit</button>
+          </div>        
+    </mat-card-content>
+  </mat-card>
+
+  <br/>
+  <br/>
+  <br/>

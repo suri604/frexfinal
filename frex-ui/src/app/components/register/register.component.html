@@ -1,0 +1,93 @@
+<html>
+    <body>
+    <br/>    
+<div  *ngIf="error;else welcome" class="login-wrapper" fxLayoutGap="40px" fxLayout="row" fxLayoutAlign="center center" >
+    
+        <mat-card class="box">
+          <mat-card-header>
+            <mat-card-title>Join our freaking community!</mat-card-title>
+          </mat-card-header>
+      
+          <form [formGroup]="profileForm" (submit)="submit()" novalidate>
+      
+            <mat-card-content >
+                    <div fxLayout="column" fxLayoutAlign="center " class="row">
+                            <div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="start center" class="row-example">  
+              <mat-form-field class="example-full-width"  >
+                <input matInput placeholder="First Name" formControlName="firstName">
+                
+              </mat-form-field>
+            
+              <mat-form-field class=""  >
+                    <input matInput placeholder="Last Name" formControlName="lastName">
+                  </mat-form-field>
+                            </div>
+                   
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Email" formControlName="eMail">
+              </mat-form-field>
+             
+              <mat-form-field class="example-full-width">
+                <input matInput type="password" placeholder="Password" formControlName="passWord">
+              </mat-form-field>
+      
+              <mat-form-field class="example-full-width">
+                    <input matInput type="password" placeholder="Confirm Password" formControlName="confirmPassword">
+                  </mat-form-field>
+               
+                <mat-form-field class="example-full-width">
+                        <input matInput placeholder="username" formControlName="username">
+                      </mat-form-field>
+                    
+                    <mat-form-field class="example-full-width">
+                            <input matInput placeholder="Mobile" formControlName="phoneNumber">
+                          </mat-form-field>
+                        </div> 
+            </mat-card-content>
+      
+            <button mat-stroked-button color="accent" class="btn-block"  type="submit" (click)="onSubmit()" >Register</button>
+      
+          </form>
+        </mat-card>
+        
+
+      </div>
+      
+      <ng-template #welcome > 
+      <div  class="login-wrapper" fxLayoutGap="40px" fxLayout="row" fxLayoutAlign="center center" >
+    
+        <mat-card class="box">
+          <mat-card-header>
+            <mat-card-title>Welcome Aboard Mr. {{this.loginBody2.firstName}}</mat-card-title>
+          </mat-card-header>
+      <img src="../../../assets/welcome.jpg">
+      <mat-card-content>
+         
+          <mat-grid-list cols="4" rowHeight="100px">
+              <mat-grid-tile
+                  [colspan]="2"
+                  [rowspan]="1">
+                  <button mat-raised-button > <a href="#">Back to Login</a></button>
+              </mat-grid-tile>
+
+              <mat-grid-tile
+                 
+                  [colspan]="2"
+                  [rowspan]="1"
+              >
+              <button mat-raised-button><a href="#">Explore Frex</a></button>
+
+                
+              </mat-grid-tile>
+            </mat-grid-list>
+        </mat-card-content>
+
+        </mat-card>
+      
+
+      </div>
+    </ng-template>
+      
+      </body>
+      </html>
+      

@@ -1,0 +1,91 @@
+body{
+  background-color: #f8ceec;
+  background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+}
+
+.mat-icon {
+  margin-top: 20px;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+
+.dash{
+  margin-left: 15px;
+  justify-content: center;
+
+}
+
+.outer{
+  border-radius: 30px;
+  background: white;
+  margin-left: 20%;
+  min-width: 300px;
+  /* margin:5vw 0 0 8vw; */
+  margin-top: 75px;
+  margin-bottom: auto;
+  margin-right: 20%;
+  float:left;
+  width:60%;
+  padding:3vw;
+  /* height:37vw; */
+  /* background: black; */
+  box-shadow: 3px 3px 8px 5px #888888;
+}
+
+.bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background-color: #f8ceec;
+  background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+}
+
+.thumb { 
+  /* background: 25% 25% no-repeat; */
+  width: 225px;
+  /* max-width: 250px; */
+  height: 225px;
+  /* background-attachment: inherit; */
+  margin: 5px;
+  /* background-image: url('../../../assets/img_avatar_prof.png'); */
+
+}
+
+.top,.btns{
+  text-align: center;
+
+}
+img{
+  background-image: url('../../../assets/img_avatar_prof.png');
+  /* background: 100% no-repeat0 */
+  /* background: #CCC url('https://firebasestorage.googleapis.com/v0/b/userprofile-6a14e.appspot.com/o/images%2Fimg_avatar.png?alt=media&token=ab0f0c59-8ce8-4391-80ef-282d717afe17') 0 0 no-repeat!important; */
+  text-indent: -9999px;
+  border: 15px solid #fff;
+  /* object-fit: contain; */
+  color: transparent!important;
+  -webkit-appearance: none!important;
+}
+
+table>tr>:nth-last-child(1),table>tr>:nth-last-child(2){
+  padding-left: 15px;
+ }
+
+ .button {
+  background-color:grey;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+  

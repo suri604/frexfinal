@@ -1,0 +1,25 @@
+.card{
+    border-radius: 20px;
+  }
+  .avatar{
+    height: 50px;
+    border-radius: 50%;
+  }
+  .fill-remaining{
+    border: 1px;
+    height: available;
+  }
+  .imgx{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+  .fill-remaining-space{
+    flex: 1 1 auto;
+    flex-direction: column;
+  }
+  .box{
+    background-color: #ffecb3;
+    padding: 8px;
+    border-radius: 16px;
+  }
+  

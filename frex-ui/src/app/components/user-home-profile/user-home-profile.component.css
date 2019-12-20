@@ -1,0 +1,88 @@
+.main{
+    width:100%;
+    height:200%;
+    background-color: #f8ceec;
+    background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+}
+
+h1{
+    color:white;
+    margin-left:3vw;
+}
+
+ul {
+    list-style-type: none;
+}
+ul li{
+    padding-top:10vh;
+    color:white;
+}
+  
+.sidebar{
+    height:100%;
+    width:25%;
+    float:left;
+    padding-top: 5%;
+}
+.tabs{
+    margin-left:30%;
+    color:white;
+}
+::ng-deep .mat-tab-label{
+    color: white;
+
+ }
+ ::ng-deep .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+    background: rgba(149, 165, 166,0.3);
+    height: 35px;
+    border-radius: 100px;
+    margin-bottom: 5px;
+ } 
+.example-small-box, .example-large-box, .example-graph-box {
+    transition: all 500ms ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    float:left;
+    background:white;
+    box-shadow:6px 6px 15px black;
+  }
+
+  .example-small-box:hover{
+    transform:scale(1.09);
+    cursor:pointer;
+  }
+ 
+ 
+  .example-large-box:hover{
+    transform:scale(1.05);
+    cursor:pointer;
+  }
+  
+  .example-graph-box:hover{
+    transform:scale(1.05);
+    cursor:pointer;
+  }
+
+  .example-small-box {
+    height: 15vw;
+    width: 17vw;
+  }
+  
+ 
+  .example-graph-box{
+    height: 20vw;
+    width: 56vw;
+  }
+  .example-large-box {
+    height: 50vw;
+    width: 50vw;
+  }
+  .internal_logo{
+    background-size: cover;
+    width:80%;
+    height:80%;
+  }

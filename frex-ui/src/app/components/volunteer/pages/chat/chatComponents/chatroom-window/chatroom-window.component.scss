@@ -1,0 +1,24 @@
+@import '../../../../../../../variables';
+
+.message-wrapper {
+  // overflow-y: scroll;
+}
+
+.select-room {
+  .select-room-message {
+    width: 30%;
+    height: 20%;
+    margin-bottom: 10%;
+    margin-top: 30%;
+    border: 2px solid $gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    
+  }
+}
+app-chat-message{
+opacity:0;}
+
+

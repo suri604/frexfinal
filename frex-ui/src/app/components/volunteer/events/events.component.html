@@ -1,0 +1,307 @@
+<!-- <div class="row">
+  <div class="col-md-8 offset-md-2"> -->
+<!-- 
+<blockquote class="blockquote">
+  <p class="mb-0 h3 display-4" >Certificate Gallery</p>
+
+<div class="container-fluid h-100">
+  <div class="row h-100">
+    <div *ngIf="navigated" class="col">
+          <app-environment-quotes [isSmall]="isSmall" [(navigated)]="navigated"></app-environment-quotes>
+
+    </div>
+    <div *ngIf="isSmall || !navigated" class="col-xl-5 col">
+          <app-environment-dashboard-profile [(navigated)]="navigated"></app-environment-dashboard-profile>
+      </div>
+  </div>
+</div>
+<div class="back"></div>
+
+
+  <footer class="blockquote-footer">The smallest act of kindness is worth more than  <cite title="Source Title">the grandest intention</cite></footer>
+</blockquote> -->
+<!-- 
+<div class="container-fluid h-100">
+  <div class="row h-100">
+    <div *ngIf="navigated" class="col">
+      <app-fitness-dashboard [isSmall]="isSmall" [(navigated)]="navigated"></app-fitness-dashboard>
+    </div>
+    <div *ngIf="isSmall || !navigated" class="col-xl-5 col">
+      <app-fitness-focus [(navigated)]="navigated"></app-fitness-focus>
+    </div>
+  </div>/
+</div> -->
+<!-- <div class="back"></div> -->
+
+
+<!-- <router-outlet></router-outlet> -->
+  <!-- </div>
+</div> -->
+
+<div class="container-fluid h-100">
+  <div class="row h-100 justify-content-center">
+    <!-- Main Card-->
+    <div class="col-12 h-100">
+      <div class="h-100 card-padding">
+        <mat-card class="h-100 card-border mat-elevation-z22">
+          <div class="d-flex flex-grow-1 h-100">
+            <!--            Horizontal bar-->
+            <div class="horizontal-bar h-100 flex-auto flex-column flex-grow-1 d-flex">
+              <div style="height: 10px"></div>
+              <!-- <a mat-icon-button class="no-outline" *ngIf="!navigated" (click)="back()">
+                <mat-icon>arrow_back</mat-icon>
+              </a> -->
+              <button mat-icon-button class="no-outline" *ngIf="!navi" (click)="onBackPressed()"><mat-icon>arrow_back</mat-icon></button>
+              <div class="d-flex flex-grow-1 flex-auto flex-column"></div>
+              <div>
+                <a mat-mini-fab class="no-outline" matTooltip="Environment Freaks"
+                   style="background-color: #1B5E20; color: white" routerLink="environment/home">
+                  <mat-icon>eco</mat-icon>
+                </a>
+                <div class="row" style="height: 20px"></div>
+                <a mat-mini-fab class="no-outline" matTooltip="Volunteer Freaks"
+                   style="background-color: #006064; color: white" routerLink="volunteer">
+                  <mat-icon>spa</mat-icon>
+                </a>
+                <div class="row" style="height: 20px"></div>
+                <a mat-mini-fab class="no-outline" matTooltip="Photography Freaks"
+                   style="background-color: #880E4F; color: white">
+                  <mat-icon>photo</mat-icon>
+                </a>
+              </div>
+              <div class="d-flex flex-grow-1 flex-auto flex-column"></div>
+            </div>
+
+            <!--            Details Card-->
+            <div class="body-details h-100 w-100 mat-elevation-z20">
+              <div class="row h-100">
+                <!--                Activity details-->
+ <div class="h-100 col">
+                  <!--                  Toolbar-->
+                  <div class="row justify-content-center" style="margin: 20px">
+                    <button matTooltip="Share" mat-mini-fab class="no-outline primary">
+                      <mat-icon style="transform: rotateY(180deg)">reply</mat-icon>
+                    </button>
+                    <div class="d-flex flex-grow-1"></div>
+                    <button matTooltip="Notifications" matBadgeColor="accent" mat-mini-fab matBadge="2"
+                            class="no-outline primary" [matMenuTriggerFor]="appMenu1">
+                      <mat-icon>notifications</mat-icon>
+                    </button>
+                    <div style="width:20px"></div>
+                    <div class="mat-subheader quicksand font-weight-bold" style="margin: auto 10px auto auto;">k
+                      jagriti
+                    </div>
+                    <img matRipple matTooltip="Profile" class="avatar mat-elevation-z10"
+                         src="https://www.w3schools.com/howto/img_avatar.png" alt="avatar">
+                  </div>
+                  <div class="row" style="height: 20px">
+                                          <!-- <google-chart [data]="rewardsChart"></google-chart> -->
+                                          <div class="row" style="margin: 10px">
+                                              <!-- <div class="quicksand mat-h2 font-weight-bolder">
+                                                  <button mat-raised-button class="no-outline" (click)="goToDetailsuplo()"
+                                                  style="margin-right: 10px; background-color: #FFC107">Upload
+                                                  </button>
+                                              </div> -->
+                                            </div>
+                        <div class="cont" *ngIf="showComponentAddEvents" #scrollcontainer>
+                            <app-category-events></app-category-events>
+                          </div>
+                          <div class="cont" *ngIf="showComponentViewEvent" #scrollcontainer>
+                              <app-event-card></app-event-card>
+                            </div>
+                            <div class="cont" *ngIf="showComponentcateg" #scrollcontainer>
+                                <app-category-selector></app-category-selector>
+                              </div>
+                          </div>
+                  <!--                  Main Content-->
+
+ 
+ <div class="cont1" *ngIf="showRewardClaim">        
+                <!--  
+                <div class="row" style="margin-left: 20px; margin-right: 10px;">
+                    <div class="col">-->
+                        <mat-card class="mat-elevation-z0 radius-20">
+                                <div class="row" style="margin: 10px">
+                                  <div class="quicksand mat-h2 font-weight-bolder"> Details
+                                      <button mat-raised-button class="no-outline" (click)="goToAddEvents()"
+                                      style="margin-right: 10px; background-color: #FFC107">Add Event
+                                      </button>
+                                  </div>
+                                </div>
+                                            <!-- <google-chart [data]="rewardsChart"></google-chart> -->
+                                <!-- <div class="cont" *ngIf="showComponentcert" #scrollcontainer>
+                                  <app-certificate-list></app-certificate-list>
+                                </div>
+                                <div class="cont" *ngIf="showComponentuplo" #scrollcontainer>
+                                    <app-certificate></app-certificate>
+                                  </div>
+                                  <div class="cont" *ngIf="showComponentcateg" #scrollcontainer>
+                                      <app-category-selector></app-category-selector>
+                                    </div> -->
+                          
+                
+                                  <div class="row" style="margin: 10px 10px 5px;">
+                                            <div class="quicksand mat-h2 font-weight-bolder">Claim rewards for today!</div>
+                                          </div>
+                                    <div class="row">
+                                <div class="col">
+                                        <mat-card class="radius-20 mat-elevation-z15 bg-3">
+                                            <div class="quicksand mat-h4 font-weight-bolder text-white">3 certificates</div>
+                                            <div class="row justify-content-end">
+                                              <button mat-raised-button class="no-outline"
+                                                      style="margin-right: 10px; background-color: #FFC107">claim
+                                              </button>
+                                            </div>
+                                        </mat-card>
+                                </div>
+                                <div class="col">
+                                        <mat-card class="radius-20 mat-elevation-z15 bg-3">
+                                            <div class="quicksand mat-h4 font-weight-bolder text-white">2 enrolled events</div>
+                                            <div class="row justify-content-end">
+                                            <button mat-raised-button class="no-outline"
+                                                    style="margin-right: 10px; background-color: #FFC107">Claim
+                                            </button>
+                                            </div>
+                                        </mat-card> -->
+                                 </div>
+
+                                <div class="col">
+                                        <mat-card class="radius-20 mat-elevation-z15 bg-3">
+                                              <div class="quicksand mat-h4 font-weight-bolder text-white">1 event completed</div>
+                                              <div class="row justify-content-end">
+                                                <button mat-raised-button class="no-outline"
+                                                        style="margin-right: 10px; background-color: #FFC107">Claim
+                                                </button>
+                                              </div>
+                                        </mat-card>
+                                </div>
+                            </div>
+                      </mat-card>
+                      
+                      <!-- </div>
+                    </div>  -->
+</div>
+
+
+    </div>
+                 
+                <!--                Aggregate Details-->
+                <div class="h-100 d-none d-md-block d-xl-block d-lg-block col-sm-4">
+                  <mat-card class="h-100 round-20 mat-elevation-z10">
+                    <div class="container-fluid h-100" style="display: flex;flex-flow: column;">'
+                      <!--                      Secondary Toolbar-->
+                      <div class="row justify-content-center">
+                        <div class="quicksand mat-h2 font-weight-bold" style="margin: auto 10px auto auto;">Other
+                          Activities
+                        </div>
+                        <div class="d-flex flex-grow-1 flex-auto"></div>
+                        <button mat-icon-button class="no-outline" [mat-menu-trigger-for]="appMenu">
+                          <mat-icon>more_vert</mat-icon>
+                        </button>
+                      </div>
+                      <div class="row" style="height: 20px"></div>
+                      <!--                      Navigate to other activities-->
+                      <div class="row">
+                        <div class="col">
+                          <mat-card (click)="goToViewEvents()" matRipple class="h-100 bg-1 cardfocus mat-elevation-z16 radius-20">
+                            <img src="../../../assets/view_event.svg" class="w-100 h-100" alt="biking image">
+                            <h2>View Events</h2>
+                          </mat-card>
+                        </div>
+                        <div class="col">
+                          <mat-card  matRipple class="h-100 bg-2 cardfocus mat-elevation-z16 radius-20">
+                            <img src="../../../assets/view_by_category.svg" class="w-100 h-100" alt="others image">
+                            <h2>View by category</h2>
+                          </mat-card>
+                        </div>
+                      </div>
+
+                      <div class="row" style="height: 40px"></div>
+                      <!--                      Agg Details and trends-->
+                      <div style="flex:1">
+                        <mat-card class="h-100 round-20 bg-grey mat-elevation-z0">
+                          <div class="container-fluid">
+                            <mat-card class="radius-20 bg-3 mat-elevation-z24">
+                              <div class="container-fluid">
+                                <div class="row">
+                                  <div class="mat-h3 quicksand font-weight-bolder text-white"
+                                       style="margin-top: auto; margin-bottom: auto">
+                                    Monthly Review
+                                  </div>
+                                  <div class="d-flex flex-grow-1 flex-auto"></div>
+                                  <button class="no-outline text-white" mat-icon-button matTooltip="more info">
+                                    <mat-icon>book</mat-icon>
+                                  </button>
+                                </div>
+                                <div class="mat-subheading-1 quicksand text-white margin-5"><b
+                                  class="text-accent">100</b> Freak Points
+                                </div>
+                                <div class="mat-subheading-2 quicksand text-white margin-5"><b
+                                  class="text-accent">250</b> Reward Points
+                                </div>
+                              </div>
+                            </mat-card>
+
+
+
+                            <div class="row" style="height: 30px"></div>
+                            <div class="row">
+                              <div class="mat-h2 quicksand margin-vert-auto">Points</div>
+                              <div class="d-flex flex-grow-1 flex-auto"></div>
+                              <div class="row red-text">
+                                <div class="margin-vert-auto margin-horiz-auto mat-h3">34%</div>
+                                <mat-icon class="red-text fa-rotate-90 margin-vert-auto text" style="height: 20px">
+                                  trending_flat
+                                </mat-icon>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="mat-h2 quicksand margin-vert-auto">goal</div>
+                              <div class="d-flex flex-grow-1 flex-auto"></div>
+                              <div class="row green-text">
+                                <div class="margin-vert-auto margin-horiz-auto mat-h3">20%</div>
+                                <mat-icon class="fa-rotate-270 green-text margin-horiz-auto margin-vert-auto text"
+                                          style="height: 20px">
+                                  trending_flat
+                                </mat-icon>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="mat-h2 quicksand margin-vert-auto">Longest Streak</div>
+                              <div class="d-flex flex-grow-1 flex-auto"></div>
+                              <div class="row blue-text">
+                                <div class="margin-vert-auto margin-horiz-auto mat-h3" style="margin-right: 10px">5
+                                  days
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row justify-content-end align-content-end">
+                              <button mat-flat-button color="accent">More Trends</button>
+                            </div>
+                          </div>
+                        </mat-card>
+                      </div>
+                      <div class="row" style="height: 20px"></div>
+                    </div>
+                  </mat-card>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+<!--User Menu-->
+<mat-menu #appMenu="matMenu">
+  <button mat-menu-item>Settings</button>
+  <button mat-menu-item>Log Out</button>
+</mat-menu>
+<!--Notifications Menu-->
+<mat-menu #appMenu1="matMenu">
+  <button mat-menu-item>Welcome!</button>
+  <button mat-menu-item>Complete your goals!</button>
+</mat-menu>
+<div class="back"></div>
+

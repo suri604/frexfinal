@@ -1,0 +1,16 @@
+.back{
+  z-index: -1;
+  height: 100%;
+  width:100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  background-color: #63d471;
+background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+
+}
+.line{
+  margin: auto 8px;
+}
+
+

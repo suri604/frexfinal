@@ -1,0 +1,380 @@
+<div class="main">
+    <div class="sidebar">
+        <!-- <h1 style="font-family: 'Courier New', Courier, monospace; color: blueviolet; padding-right: 5%;"><strong>FReX</strong></h1> -->
+        <ul>
+            <li style="font-family: 'Courier New', Courier, monospace;" (click)="open('fitness')"><strong>Fitness
+                    Dashboard</strong></li>
+            <li style="font-family: 'Courier New', Courier, monospace;" (click)="open('environment')">
+                <strong>Environment Dashboard</strong></li>
+            <li style="font-family: 'Courier New', Courier, monospace; " (click)="open('globaldashboard')">
+                <strong>Global Dashboard</strong></li>
+            <li style="font-family: 'Courier New', Courier, monospace;" (click)="open('account')"><strong>Your
+                    Account</strong></li>
+            <!-- <li style="font-family: 'Courier New', Courier, monospace; " ><strong>Your Points {{rewards}}</strong></li> -->
+
+        </ul>
+        <div class="xps">
+            <ul class="xpss">
+
+                <li style="font-family: 'Courier New', Courier, monospace; " class="rewards_text"><strong>Your Points:
+                        {{rewards}}</strong></li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="user_content">
+        <br /><br /><br /><br />
+        <mat-tab-group dynamicHeight class="tabs">
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <mat-icon class="example-tab-icon">fastfood</mat-icon>
+                    Food and Beverage
+                </ng-template>
+                <div class="container">
+                <div class="row">
+                <div class="col-4 h-100">
+                <div (click)="onClick10()" class="card example-small-box mat-elevation-z4">
+
+                    <img class="internal_logo w-100 d-flex flex-grow-1 flex-auto" *ngIf="!svgnotvisible10" mat-card-image
+                        src="..//assets/icons8-swiggy.svg" alt="swiggy image">
+
+                        <div class="row" [hidden]="svgnotvisible10">
+                                <div class="quicksand font-weight-bolder" style="margin-left: 10%;">
+                                  50% off on all Swiggy orders @ 100 points
+                                </div>
+                            </div>
+
+
+
+
+
+
+                    <form class="form" width="17vw" height="15vw" [hidden]="!submitted10">
+
+                        <h5><strong>Your coupon code:</strong></h5> <img class="internal_logo"
+                            [hidden]="!insufficient10" mat-card-image src="..//assets/balance.svg" alt="balance image">
+                        <h4 id="p10"><code><strong>FReXSwiggyIT</strong></code></h4>
+                        <button type="button" class="btn btn-success" (click)="copyToClipboard('#p10')">Copy</button>
+                        <!-- <h6 id="copyalert"  [hidden]="!copied10">Copied!</h6> -->
+                        <a href="https://www.swiggy.com/checkout" target="_blank" class="btn btn-outline-danger"
+                            role="button" aria-pressed="true">Redeem Coupon</a>
+
+                    </form>
+                
+                    <img class="internal_logo" [hidden]="!insufficient10" mat-card-image src="..//assets/balance.png"
+                        alt="balance image">
+                </div>
+                </div>
+                <div class="col-4 h-100">
+                <div (click)="onClick9()" class="card example-small-box mat-elevation-z4">
+
+                    <img class="internal_logo w-100 d-flex flex-grow-1 flex-auto" *ngIf="!svgnotvisible9" mat-card-image
+                        src="..//assets/icons8-zomato.svg" alt="zomato image">
+
+                        <div class="row" [hidden]="svgnotvisible9">
+                                <div class="quicksand font-weight-bolder" style="margin-left: 10%;">
+                                  Free delivery on first 5 Zomato orders @ 200 points
+                                </div>
+                            </div>
+
+                    <form class="form" width="17vw" height="15vw" [hidden]="!submitted9">
+
+                        <h5><strong>Your coupon code:</strong></h5>
+                        <h4 id="p9"><code><strong>FReXeatZomato</strong></code></h4>
+                        <button type="button" class="btn btn-success" (click)="copyToClipboard('#p9')">Copy</button>
+                        <a href="https://www.zomato.com/bangalore/order-food-online" target="_blank"
+                            class="btn btn-outline-danger" role="button" aria-pressed="true">Redeem Coupon</a>
+
+                        <!-- <h6 id="copyalert"  [hidden]="!copied1">Copied!</h6> -->
+                    </form>
+                    <img class="internal_logo" [hidden]="!insufficient9" mat-card-image src="..//assets/balance.png"
+                        alt="balance image">
+                </div>
+                </div>
+                </div>
+                </div>
+
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <mat-icon class="example-tab-icon">shopping_cart</mat-icon>
+                    Online Shopping
+                </ng-template>
+                <!-- <div class="example-large-box mat-elevation-z4">
+                    Large content
+                    </div> -->
+                    <div class="container">
+                        <div class="row">
+                                <div class="col-4 h-100">
+                <div (click)="onClick8()" class="card example-small-box mat-elevation-z4" style="margin: 20px;">
+
+                    <img class="internal_logo w-100 d-flex flex-grow-1 flex-auto" *ngIf="!svgnotvisible8" mat-card-image
+                        src="..//assets/icons8-amazon.svg" alt="amazon image">
+                        <div class="row" [hidden]="svgnotvisible8">
+                                <div class="quicksand font-weight-bolder" style="margin-left: 10%;">
+                                 Amazon Prime trial for 45 days @ 100 points
+                                </div>
+                            </div>
+
+                    <form class="form" width="17vw" height="15vw" [hidden]="!submitted8">
+
+                        <h5><strong>Your coupon code:</strong></h5>
+                        <h4 id="p8"><code><strong>FReXAtoZ</strong></code></h4>
+                        <button type="button" class="btn btn-success" (click)="copyToClipboard('#p8')">Copy</button>
+                        <!-- <h6 id="copyalert"  [hidden]="!copied">Copied!</h6> -->
+                        <a href="https://www.amazon.in/" target="_blank" class="btn btn-outline-danger" role="button"
+                            aria-pressed="true">Redeem Coupon</a>
+
+                    </form>
+                    <img class="internal_logo" [hidden]="!insufficient8" mat-card-image src="..//assets/balance.png"
+                        alt="balance image">
+                </div>
+                </div>
+                <div class="col-4 h-100">
+                <div (click)="onClick7()" class="card example-small-box mat-elevation-z4" style="margin: 20px;">
+
+                    <img class="internal_logo w-100 d-flex flex-grow-1 flex-auto" *ngIf="!svgnotvisible7" mat-card-image src="..//assets/myntra.png"
+                        alt="myntra image">
+                        <div class="row" [hidden]="svgnotvisible7">
+                                <div class="quicksand font-weight-bolder" style="margin-left: 10%;">
+                                  Free delivery on first 5 Myntra orders @ 300 points
+                                </div>
+                            </div>
+
+                    <form class="form" width="17vw" height="15vw" [hidden]="!submitted7">
+
+                        <h5><strong>Your coupon code:</strong></h5>
+                        <h4 id="p7"><code><strong>FReXMyntra</strong></code></h4>
+                        <button type="button" class="btn btn-success" (click)="copyToClipboard('#p7')">Copy</button>
+                        <!-- <h6 id="copyalert"  [hidden]="!copied">Copied!</h6> -->
+                        <a href="https://www.myntra.com/" target="_blank" class="btn btn-outline-danger" role="button"
+                            aria-pressed="true">Redeem Coupon</a>
+
+                    </form>
+                    <img class="internal_logo" [hidden]="!insufficient7" mat-card-image src="..//assets/balance.png"
+                        alt="balance image">
+                </div>
+                </div>
+                </div>
+                </div>
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <mat-icon class="example-tab-icon">card_travel</mat-icon>
+                    Travel and Hospitality
+                </ng-template>
+                <div class="container">
+                <div class="row">
+                <div class="col-4 h-100">
+                <div (click)="onClick6()" class="card example-small-box mat-elevation-z4" style="margin: 20px;">
+
+                    <img class="internal_logo w-100 d-flex flex-grow-1 flex-auto" *ngIf="!svgnotvisible6" mat-card-image src="..//assets/yatra.png"
+                        alt="yatra image">
+                        <div class="row" [hidden]="svgnotvisible6">
+                                <div class="quicksand font-weight-bolder" style="margin-left: 10%;">
+                                  Rs 200 off on domestic flights @ 100 points
+                                </div>
+                            </div>
+
+                    <form class="form" width="17vw" height="15vw" [hidden]="!submitted6">
+
+                        <h5><strong>Your coupon code:</strong></h5>
+                        <h4 id="p6"><code><strong>FReXYatrigon</strong></code></h4>
+                        <button type="button" class="btn btn-success" (click)="copyToClipboard('#p6')">Copy</button>
+                        <!-- <h6 id="copyalert"  [hidden]="!copied">Copied!</h6> -->
+                        <a href="https://www.yatra.com/" target="_blank" class="btn btn-outline-danger" role="button"
+                            aria-pressed="true">Redeem Coupon</a>
+
+                    </form>
+                    <img class="internal_logo" [hidden]="!insufficient6" mat-card-image src="..//assets/balance.png"
+                        alt="balance image">
+                </div>
+                </div>
+                <div class="col-4 h-100">
+                <div (click)="onClick5()" class="card example-small-box mat-elevation-z4 " style="margin: 20px;">
+
+                    <img class="internal_logo w-100 d-flex flex-grow-1 flex-auto" *ngIf="!svgnotvisible5" mat-card-image src="..//assets/goibibo.png"
+                        alt="goibibo image">
+                        <div class="row" [hidden]="svgnotvisible5">
+                                <div class="quicksand font-weight-bolder" style="margin-left: 10%;">
+                                  Rs 500 off on domestic flights @ 150 points
+                                </div>
+                            </div>
+
+                    <form class="form" width="17vw" height="15vw" [hidden]="!submitted5">
+
+                        <h5><strong>Your coupon code:</strong></h5>
+                        <h4 id="p5"><code><strong>FReXIbiCome</strong></code></h4>
+                        <button type="button" class="btn btn-success" (click)="copyToClipboard('#p5')">Copy</button>
+                        <!-- <h6 id="copyalert"  [hidden]="!copied">Copied!</h6> -->
+                        <a href="https://www.goibibo.com/" target="_blank" class="btn btn-outline-danger" role="button"
+                            aria-pressed="true">Redeem Coupon</a>
+
+                    </form>
+                    <img class="internal_logo" [hidden]="!insufficient5" mat-card-image src="..//assets/balance.png"
+                        alt="balance image">
+                </div>
+                </div>
+                <!-- <div (click)="onClick4()" class="example-small-box mat-elevation-z4">
+
+                    <img class="internal_logo" [hidden]="svgnotvisible4" mat-card-image src="..//assets/ixigo.png"
+                        alt="ixigo image">
+
+                    <form class="form" width="17vw" height="15vw" [hidden]="!submitted4">
+
+                        <h5><strong>Your coupon code:</strong></h5>
+                        <h4 id="p4"><code><strong>FReXGoIxigo</strong></code></h4>
+                        <button type="button" class="btn btn-success" (click)="copyToClipboard('#p4')">Copy</button>
+                        <a href="https://www.ixigo.com/" target="_blank" class="btn btn-outline-danger" role="button"
+                            aria-pressed="true">Redeem Coupon</a>
+
+                    </form>
+                    <img class="internal_logo" [hidden]="!insufficient4" mat-card-image src="..//assets/balance.png"
+                        alt="balance image">
+                </div> -->
+               
+                            <div class="col-4 h-100">
+                                <div (click)="onClick4()" class="card mat-elevation-z24 example-small-box" style="margin: 20px;">
+                                    <img class="internal_logo w-100 d-flex flex-grow-1 flex-auto" *ngIf="!svgnotvisible4"
+                                        mat-card-image src="..//assets/ixigo.png" alt="ixigo image">
+    
+                                    <div class="row" [hidden]="svgnotvisible4">
+                                        <div class="quicksand font-weight-bolder" style="margin-left: 10%;">
+                                           Rs 1000 off on domestic flights @ 300 points
+                                        </div>
+                                    </div>
+                                    <form class="form" width="17vw" height="15vw" [hidden]="!submitted4">
+    
+                                            <h5><strong>Your coupon code:</strong></h5>
+                                            <h4 id="p2"><code><strong>FReXGoIxigo</strong></code></h4>
+                                            <button type="button" class="btn btn-success" (click)="copyToClipboard('#p2')">Copy</button>
+                                   
+                                  
+                                    <a href="https://www.ixigo.com/" target="_blank" class="btn btn-outline-danger" role="button"
+                                                aria-pressed="true">Redeem Coupon</a>
+                    
+                                        </form>
+                                        <img class="internal_logo" [hidden]="!insufficient4" mat-card-image src="..//assets/balance.png"
+                                            alt="balance image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+    
+            </mat-tab>
+            <mat-tab label>
+                <ng-template mat-tab-label>
+                    <mat-icon class="example-tab-icon">movie</mat-icon>
+                    Music and Media
+                </ng-template>
+                <!-- <div (click)="onClick3()" class="example-small-box mat-elevation-z4">
+
+                    <img class="internal_logo" [hidden]="svgnotvisible3" mat-card-image
+                        src="..//assets/icons8-netflix.svg" alt="netflix image">
+
+                    <form class="form" width="17vw" height="15vw" [hidden]="!submitted3">
+
+                        <h5><strong>Your coupon code:</strong></h5>
+                        <h4 id="p3"><code><strong>FReXSNetChill</strong></code></h4>
+                        <button type="button" class="btn btn-success" (click)="copyToClipboard('#p3')">Copy</button>
+                      
+                        <a href="https://www.netflix.com/in/redeem" target="_blank" class="btn btn-outline-danger"
+                            role="button" aria-pressed="true">Redeem Coupon</a>
+
+                    </form>
+                    <img class="internal_logo" [hidden]="!insufficient3" mat-card-image src="..//assets/balance.png"
+                        alt="balance image">
+                </div> -->
+                <div class="container">
+                        <div class="row">
+                            <div class="col-4 h-100">
+                                <div (click)="onClick3()" class="card mat-elevation-z24 example-small-box" style="margin: 20px;">
+                                    <img class="internal_logo w-100 d-flex flex-grow-1 flex-auto" *ngIf="!svgnotvisible3"
+                                        mat-card-image src="..//assets/icons8-netflix.svg" alt="netflix image">
+    
+                                    <div class="row" [hidden]="svgnotvisible3">
+                                        <div class="quicksand font-weight-bolder" style="margin-left: 10%;">
+                                          Netflix subscription for 60 days @ 100 points
+                                        </div>
+                                    </div>
+                                    <form class="form" width="17vw" height="15vw" [hidden]="!submitted3">
+    
+                                            <h5><strong>Your coupon code:</strong></h5>
+                                            <h4 id="p2"><code><strong>FReXSNetChill</strong></code></h4>
+                                            <button type="button" class="btn btn-success" (click)="copyToClipboard('#p2')">Copy</button> 
+                                   
+                                  
+                                    <a href="https://www.netflix.com/in/redeem" target="_blank" class="btn btn-outline-danger" role="button"
+                                                aria-pressed="true">Redeem Coupon</a>
+                    
+                                        </form>
+                                        <img class="internal_logo" [hidden]="!insufficient3" mat-card-image src="..//assets/balance.png"
+                                            alt="balance image">
+                                </div>
+                            </div>
+                     
+                  
+    
+                <!-- <div (click)="onClick2()" class="example-small-box mat-elevation-z4">
+
+                    <img class="internal_logo" [hidden]="svgnotvisible2" mat-card-image
+                        src="..//assets/icons8-spotify.svg" alt="spotify image">
+
+                    <form class="form" width="17vw" height="15vw" [hidden]="!submitted2">
+
+                        <h5><strong>Your coupon code:</strong></h5>
+                        <h4 id="p2"><code><strong>FReXSpotify</strong></code></h4>
+                        <button type="button" class="btn btn-success" (click)="copyToClipboard('#p2')">Copy</button> -->
+                <!---->
+                <!-- <h6 id="copyalert"  [hidden]="!copied">Copied!</h6> -->
+                <!-- <a href="https://www.spotify.com/" target="_blank" class="btn btn-outline-danger" role="button"
+                            aria-pressed="true">Redeem Coupon</a>
+
+                    </form>
+                    <img class="internal_logo" [hidden]="!insufficient2" mat-card-image src="..//assets/balance.png"
+                        alt="balance image">
+                </div> -->
+                
+                  
+                        <div class="col-4 h-100">
+                            <div (click)="onClick2()" class="card mat-elevation-z24 example-small-box" style="margin: 20px;">
+                                <img class="internal_logo w-100 d-flex flex-grow-1 flex-auto" *ngIf="!svgnotvisible2"
+                                    mat-card-image src="..//assets/icons8-spotify.svg" alt="spotify image">
+
+                                <div class="row" [hidden]="svgnotvisible2">
+                                    <div class="quicksand font-weight-bolder" style="margin-left: 10%;">
+                                       Try Spotify for 3 months @ 250 points
+                                    </div>
+                                </div>
+                                <form class="form" width="17vw" height="15vw" [hidden]="!submitted2">
+
+                                        <h5><strong>Your coupon code:</strong></h5>
+                                        <h4 id="p2"><code><strong>FReXSpotify</strong></code></h4>
+                                        <button type="button" class="btn btn-success" (click)="copyToClipboard('#p2')">Copy</button>
+                               
+                              
+                                <a href="https://www.spotify.com/" target="_blank" class="btn btn-outline-danger" role="button"
+                                            aria-pressed="true">Redeem Coupon</a>
+                
+                                    </form>
+                                    <img class="internal_logo" [hidden]="!insufficient2" mat-card-image src="..//assets/balance.png"
+                                        alt="balance image">
+                            </div>
+                        </div>
+                    </div>
+              </div>
+
+
+
+
+
+
+            </mat-tab>
+
+        </mat-tab-group>
+
+
+    </div>
+</div>

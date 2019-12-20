@@ -1,0 +1,11 @@
+<div class="container-fluid h-100">
+  <div class="row h-100">
+    <div *ngIf="navigated" class="col">
+      <app-volunteer-dashboard [isSmall]="isSmall" [(navigated)]="navigated"></app-volunteer-dashboard>
+    </div>
+    <div *ngIf="isSmall || !navigated" class="col-xl-8 col">
+      <app-volunteer-focus [(navigated)]="navigated"></app-volunteer-focus>
+    </div>
+  </div>
+</div>
+<div class="back"></div>

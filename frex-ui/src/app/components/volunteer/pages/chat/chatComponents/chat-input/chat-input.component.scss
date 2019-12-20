@@ -1,0 +1,19 @@
+@import "../../../../../../../variables";
+
+.new-message-wrapper {
+  .input-group {
+    align-self: flex-end;
+  .form-control {
+      border-radius: 0;
+      border: 0;
+      background-color: $light-grey;
+//       background-color: #f6f0c4;
+// background-image: linear-gradient(315deg, #f6f0c4 0%, #d99ec9 74%);
+
+      &:focus {
+        outline: 0;
+        box-shadow: none;
+      }
+    }
+  }
+}

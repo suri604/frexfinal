@@ -1,0 +1,202 @@
+<div class="main">
+  <ul class="top_menu">
+    <li class="works" (click)="donation()">Become a patron</li>
+    <li class="global_home"  *ngIf="logged" (click)="global()">Global Dashboard</li>
+    <li class="works jogger">How it works</li>
+    <li *ngIf="!logged" (click)="loginpopup()">Login</li>
+    <button (click)="open()" *ngIf="!logged" mat-flat-button>Get started!</button>
+    <li *ngIf="logged" (click)="profile()">{{username}}</li>
+  </ul>
+
+
+  <button class="menu_btn" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="donation()">
+      <span>Become a patron</span>
+    </button>
+    <button  *ngIf="logged" mat-menu-item disabled (click)="global()">
+      <span>Global Dashboard</span>
+    </button>
+   
+    <button (click)="loginpopup()" *ngIf="!logged" mat-menu-item>
+      <span>Login</span>
+    </button>
+    <button (click)="open()" *ngIf="!logged" mat-menu-item>
+      <span>Get started!</span>
+    </button>
+    <button (click)="profile()"  *ngIf="logged"  mat-menu-item>
+      <span>{{username}}</span>
+    </button>
+  </mat-menu>
+  
+
+
+
+  <div class="top_container">
+    <h1>FREX FOR FREAKS</h1>
+    <div class="left_div animated bounceInDown">
+      <img class="top_image" src="..//assets/mindfull.svg" alt="partner image">
+      <br/>
+      <button *ngIf="!logged" mat-raised-button>Get started today!</button>
+      <div class="typed-strings">
+      </div>
+      <div class="typed-strings1">
+      </div>
+      <br/><br/>
+    </div>
+
+    <div class="right_div animated bounceInDown">
+      <div class="right_div_center">
+        <div class="right_div_inner jogger">
+          <img class="internal_logo" src="..//assets/jogging.png" alt="partner image">
+          <p>FITNESS</p>
+        </div>
+        <div class="right_div_inner photography">
+          <img class="internal_logo" src="..//assets/photography.svg" alt="partner image">
+          <p>PHOTOGRAPHY</p>
+        </div>
+        <div class="right_div_inner volunteer">
+          <img class="internal_logo" src="..//assets/volunteer.svg" alt="partner image">
+          <p>VOLUNTEERING</p>
+        </div>
+        <div class="right_div_inner environment">
+          <img class="internal_logo" src="..//assets/environment.svg" alt="partner image">
+          <p>ENVIRONMENT</p>
+        </div>
+      </div>
+    </div>
+    <br/><br/><br/>
+  </div>
+
+  <div class="mid_content">
+    <br/><br/><br/>
+    <div class="content_mid_top">
+      <div class="box_image">
+        <img class="internal_logo" src="..//assets/mobile.png" alt="partner image">
+        <br/><br/>
+        <p>USE YOUR PHONE AND WIN</p>
+      </div>
+      <div class="box_image">
+        <img class="internal_logo" src="..//assets/trophy.svg" alt="partner image">
+        <br/><br/>
+        <p>ON GOING MOTIVATIONAL CHALLENGES</p>
+      </div>
+      <div class="box_image">
+        <img class="internal_logo" src="..//assets/boxes.png" alt="partner image">
+        <br/><br/>
+        <p>MIX AND MATCH CONTEST</p>
+      </div>
+      <div class="box_image">
+        <img class="internal_logo" src="..//assets/color.png" alt="partner image">
+        <br/><br/>
+        <p>COMMUNITIES ADDING COLORS TO LIFE</p>
+      </div>
+    </div>
+    <div class="animation_space"></div>
+    <br/><br/><br/><br/>
+
+    <div class="content_holder animation_one animated jogger_content1">
+      <div class="box_image">
+        <img class="internal_logo1" src="..//assets/jogging.png" alt="partner image">
+      </div>
+      <div class="box_content">
+        <p >Get rewarded for staying fit! Yes, we mean it. Earn coins for every mile you run and redeem them at our
+          partner sites. Run Simba, run for your rewards.
+        </p>
+        <button class="post_login" (click)="gotofit()" mat-flat-button>Get fit today!</button>        
+      </div>
+    </div>
+    <br/><br/><br/><br/>
+    <div class="content_holder animation_two animated photography_content">
+      <div class="box_image">
+        <img class="internal_logo1" src="..//assets/photography.svg" alt="partner image">
+      </div>
+      <div class="box_content">
+        <p>Do you have a story to tell? Does your lens have a different perspective on this world? Get set! Capture them
+          on your reels. Get rewarded.
+        </p>
+        <button class="post_login" (click)="gotophoto()" mat-flat-button>Get creative today!</button>        
+      </div>
+    </div>
+    <br/><br/><br/><br/>
+    <div class="content_holder animation_three animated volunteer_content">
+      <div class="box_image">
+        <img class="internal_logo1" src="..//assets/volunteer.svg" alt="partner image">
+      </div>
+      <div class="box_content">
+
+        <p>"Volunteers are not paid -- not because they are worthless, but because they are priceless" is a saying. Our
+          rewards can't match the level of satisfaction that your volunteering activities give you. But still, we
+          welcome you to share your volunteering activities with us. Go Samaritan!
+        </p>
+        <button class="post_login" (click)="gotvolun()" mat-flat-button>Bring some change today!</button>        
+      </div>
+    </div>
+    <br/><br/><br/><br/>
+    <div class="content_holder animation_four animated environment_content">
+      <div class="box_image">
+        <img class="internal_logo1" src="..//assets/environment.svg" alt="partner image">
+      </div>
+      <div class="box_content">
+        <p>Planet Earth deserves better treatment from us, humans, you too feel the same? Ya we got you covered! Be it
+          using public transport or planting trees, share with us how you ensured environmental well-being. Rewards are
+          waiting for you.
+        </p>
+        <button class="post_login" (click)="gotoenviron()" mat-flat-button>Save the earth today!</button>        
+      </div>
+    </div>
+    <br/><br/><br/><br/>
+    <button class="back_btn" (click)="back()" mat-flat-button>Back to top!</button>
+    <section></section>
+    <footer class="footer-distributed">
+
+      <div class="footer-left">
+
+        <h3>Frex</h3>
+
+
+        <p class="footer-company-name">Frex Pvt. Ltd. © 2019</p>
+      </div>
+
+      <div class="footer-center">
+
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Stackroute Koramangala</span> Block 3, Bangalore</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+91-87726787281</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:frex@stackroute.in">frex@stackroute.in</a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span>About the company</span>
+         Frex is a platform which is aimed at gamifying numerous domains like fitness, photography, volunteering, and more!
+        </p>
+        <div class="footer-icons">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-github"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<div class="bg"></div>
+
+
+

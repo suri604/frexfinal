@@ -1,0 +1,146 @@
+@media only screen and (max-width:768px){
+
+
+    .main{
+        background:none;
+    }
+    .top_menu{
+        display: none;
+    }
+    .menu_btn{
+        display: block;
+        float:right;
+    }
+
+    .top_container{
+        height:180vw;
+    }
+
+    .top_container>h1{
+        font-size: 30px;
+        margin:0 auto;
+        text-align:center;
+        display:block;
+    }
+
+    .top_image {
+        /* position: absolute;
+        top: 20%;
+        left: 40%; */
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        height: 60%;
+        /* transform: translate(-50%, -50%); */
+    }
+
+    .typed-strings, .typed-strings1{
+        font-size:20px;
+    }
+
+    .left_div {
+        width: 100%;
+        height: 40%;
+        float: left;
+        margin: 1vw;
+        border:none;
+    }
+
+    .right_div {
+        float: left;
+        margin: 14.5vw 1vw 0 5%;
+        background: white;
+        width: 90%;
+        height: 45%;
+        border-radius: 0.5vw;
+        box-shadow: 3px 3px 8px 5px #888888;
+    }
+
+    .right_div_center {
+        width: 80%;
+        height: 95%;
+        margin: 0 auto;
+        display: block;
+        /* background: red; */
+        position: relative;
+    }
+    
+    .right_div_inner {
+        width: 45%;
+        height: 45%;
+        background: white;
+        border-radius: 0.5vw;
+        float: left;
+        margin: 1.6vw;
+        box-shadow: 3px 3px 8px 5px #888888;
+        position: relative;
+    }
+    
+    .right_div_inner:hover {
+        box-shadow: 3px 3px 8px 5px #1e0eff;
+    }
+    
+    .right_div_inner > .internal_logo {
+        height:100%;
+        width: 100%;
+        margin: 1vw;
+        cursor: pointer;
+    }
+
+    .content_mid_top{
+        height:auto;
+        overflow:auto;
+    }
+
+    .content_mid_top>.box_image {
+        width: 100%;
+        height: 100%;
+        float: left;
+        margin:0 auto;       
+        display:block; 
+    }
+
+    .box_image>p{
+        width:100%;
+        font-size:10px;
+        text-align:center;
+    }
+
+    .box_image > img {
+        width: 50%;
+        height: 50%;
+        margin-left:20vw;
+    }  
+
+    .content_holder {
+        box-shadow: 3px 3px 8px 5px #888888;
+        background: white;
+        width: 70vw;
+        height: 40vw;
+        border-radius: 30px;
+        margin: 0 auto; 
+    }
+    
+    .box_content>p{
+        width:180%;
+        text-align: center;
+        margin:0 auto;
+        font-size: 10px;
+    }
+    
+    .box_image, .box_image>.internal_logo1{
+        display: none;
+    }
+
+    .post_login{
+        /* display: none; */
+        width:auto;
+        margin-top:10px;
+        font-size:10px;
+    }
+    .animation_space{
+        display: none;
+    }
+
+
+}

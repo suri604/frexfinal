@@ -1,0 +1,89 @@
+
+<p>Add the event for different categories via form</p>
+
+<div class="card" style="width:25rem">
+  <div class="card-body">
+    <form [formGroup]="formTemplate" (submit)="onSubmit(formTemplate.value)">
+
+
+      <div class="text-center">
+        <img [src]="eventSrc" width="350px" height="250px" (click)="fileUploader.click()">
+      </div>
+
+      <div class="form-group">
+        <label>Select file to upload</label>
+        <input type="file" accept="certificate/*" class="form-control" #fileUploader formControlName="eventUrl"
+               (change)="showPreview($event)">
+        <div class="text-danger" *ngIf="isSubmitted &&  formControls.eventUrl.errors?.required">This field is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input class="form-control" formControlName="caption" placeholder="Caption">
+        <div class="text-danger" *ngIf="isSubmitted && formControls.caption.errors?.required">This field is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input class="form-control" formControlName="name" placeholder="Name for event">
+        <div class="text-danger" *ngIf="isSubmitted && formControls.name.errors?.required">This field is required.
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <input class="form-control" formControlName="address" placeholder="Type the address for your event">
+        <div class="text-danger" *ngIf="isSubmitted && formControls.address.errors?.required">This field is required.
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <input class="form-control" formControlName="email" placeholder="enter your email">
+        <div class="text-danger" *ngIf="isSubmitted && formControls.email.errors?.required">This field is required.
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <input class="form-control" formControlName="mobile" placeholder="Enter mobile number">
+        <div class="text-danger" *ngIf="isSubmitted && formControls.mobile.errors?.required">This field is required.
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <input class="form-control" formControlName="time" placeholder="time">
+        <div class="text-danger" *ngIf="isSubmitted && formControls.time.errors?.required">This field is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <select formControlName="category" class="form-control">
+          <option value="PublicHealth">Public Health</option>
+          <option value="ChildrenElderlyAndDisabled">Children,Elderly and Disabled</option>
+          <option value="TrainingResearchAndEnvironment">Training,Reasearch and Environment</option>
+          <option value="PoliticalAndHistorical">Political and Historical</option>
+        </select>
+      </div>
+
+
+      <div class="form-group">
+        <input class="form-control" formControlName="eventDescription" placeholder="Event Description here">
+        <div class="text-danger" *ngIf="isSubmitted && formControls.eventDescription.errors?.required">This field is required.
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <a routerLink="/eventCards" class="btn btn-primary btn-block float-right">Go To Event Gallery</a>
+        </div>
+        <div class="form-group col-md-6">
+          <button type="submit" class="btn btn-success btn-block float-right">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+

@@ -1,0 +1,20 @@
+<div class="container-fluid">
+<table *ngIf="imageList">
+    <div class="row">
+    <div *ngFor="let i of rowIndexArray" class="col-md-4">
+      <div>
+        <div class="imagebox" *ngIf="i==0">
+          <a routerLink="/environment/main/save">
+            <img src="../../../../assets/up.svg" class="img-fluid">
+          
+            <span class="imagebox-desc">Insert New Image</span></a>
+          </div>
+        <div class="imagebox" *ngIf="i!=0">
+          <img [src]="imageList[i].imageUrl" class="img-fluid">
+          <span class="imagebox-desc">{{imageList[i].caption}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </table>
+  </div>

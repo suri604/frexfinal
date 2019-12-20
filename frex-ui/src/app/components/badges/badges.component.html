@@ -1,0 +1,20 @@
+<div class="outer-container">
+    <div class="tp-wrapper" *ngFor="let badge of bgs">
+      <div class="tp-box" (click)="toggleFlip(badge.id)" [@flipState]="flip[badge.id]">
+        <div class="tp-box__side tp-box__front">
+          <div class="title">
+            {{badge.name}}
+          </div>
+          <div class="pic">
+            <img [src]="badge.img" alt="icon">
+          </div>
+        </div>
+        <div class="tp-box__side tp-box__back">
+          <div class="back">
+            {{badge.detail}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

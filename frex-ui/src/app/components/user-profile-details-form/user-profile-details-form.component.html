@@ -1,0 +1,122 @@
+<div class="outermost">
+
+    <div class="outer">
+
+      <h2>Fill your details</h2>
+
+      <div class="image-preview" id="imagePreview">
+
+        <label class="hoverable" for="fileInput">
+          <img class="thumb" name="profileImage" id="ppic" [src]="imgURL">
+          <!-- url ? user.imgURL : 'https://www.w3schools.com/howto/img_avatar.png' -->
+          <div class="background"></div>
+        </label>
+        <br />
+
+      </div>
+      <br>
+      <input id="fileInput" type='file' (change)="onSelectFile($event)" style="display: none">
+      <!-- <button *ngIf="url" mat-raised-button color="warn" (click)="delete()">Delete</button> -->
+
+
+      <div class="details-container">
+
+        <mat-form-field>
+          <input matInput placeholder="Username" minlength="4" name="username" [(ngModel)]="user.userName" readonly
+            required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="First Name" [(ngModel)]="user.firstName" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Last Name" [(ngModel)]="user.lastName" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" [(ngModel)]="user.dateOfBirth" placeholder="Date of Birth" required>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-select placeholder="Gender" [(ngModel)]="user.gender">
+            <mat-option value="Male">Male</mat-option>
+            <mat-option value="Female">Female</mat-option>
+            <mat-option value="Other">Other</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <textarea matInput placeholder="Address" [(ngModel)]="user.address" required></textarea>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-select placeholder="Country" [(ngModel)]="user.country">
+            <mat-option value="India">India</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Phone Number" [(ngModel)]="user.phoneNumber" type="tel" minlength="10"
+            maxlength="10" required>
+        </mat-form-field>
+
+
+        <mat-form-field>
+          <input matInput placeholder="Email ID" type="email" [(ngModel)]="user.mailId" [email]="true" required>
+        </mat-form-field>
+        <br>
+
+        <div class="verification">
+          <div *ngIf="!x">
+            <mat-form-field>
+              <mat-select placeholder="Choose your Government ID">
+                <mat-option value="Aadhaar">Aadhaar</mat-option>
+                <mat-option value="Pan">PAN</mat-option>
+                <mat-option value="Passport">Passport</mat-option>
+                <mat-option value="Driving License">Driving License</mat-option>
+
+              </mat-select>
+            </mat-form-field>
+
+            <label>Upload your government ID for veification</label>
+            <input type='file' (change)="onSelectProof($event)">
+            <mat-form-field>
+              <input matInput #governmentId placeholder="Government ID number">
+            </mat-form-field>
+          </div>
+          <div *ngIf="x">
+            <p>Your profile verification is in progress...</p>
+          </div>
+          <!-- <div *ngSwitchDefault>
+      <p>Your profile is verified!</p>
+      </div> -->
+      </div>
+    </div>
+    <button
+      #btn
+      mat-raised-button
+      color="primary"
+      style="margin-bottom: 20px"
+      (click)="submitForm()"
+    >
+      Update
+    </button>
+    <button
+      #btn2
+      mat-raised-button
+      color="danger"
+      style="margin-bottom: 20px"
+      (click)="back()"
+    >
+      Cancel
+    </button>
+    <br />
+  </div>
+  <div style="color: transparent; font-size: 1px;">
+    .
+  </div>
+</div>
+
+<!-- 
+<img src="/home/cgi/photos/profile_pics/me.png" alt="demopic" width="50" height="50"/> -->
+<div class="bg"></div>

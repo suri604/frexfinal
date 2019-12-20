@@ -1,0 +1,16 @@
+.info-card{
+  /* background-color: #673ab7; */
+  /* background-color: #63d471;
+  background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);   */
+  background-color: #66BB6A;
+background-image: linear-gradient(to bottom right, #66BB6A , #9CCC65);
+
+  color: black;
+  border-radius: 10px;
+}
+
+.amber-button{
+  background-color: #FFE082;
+  padding: 10px;
+  border-radius: 20px;
+}

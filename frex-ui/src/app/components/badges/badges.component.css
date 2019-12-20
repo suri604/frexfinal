@@ -1,0 +1,85 @@
+.tp-wrapper {
+    -webkit-perspective: 800px;
+            perspective: 800px;
+  }
+  
+  .tp-box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 1rem 1rem;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform         : transform 1s;
+        -ms-transform         : transform 1s;
+            transform         : transform 1s;
+  }
+  .tp-box__side {
+     width: 100%;
+    height: 100%;
+    position: absolute;
+
+    border-radius: 15px;
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    color: #fff;
+    text-align: center;
+    /* line-height: 20px; */
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  .tp-box__front {
+      /* margin-top: 20px; */
+      background-color: #f8ceec;
+    background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+    /* background: rgb(120, 24, 158); */
+    -webkit-transform : rotateY(0deg);
+    -ms-transform     : rotateY(0deg);
+    transform         : rotateY(0deg);
+  }
+  .tp-box__back {
+    font-size: 16px;
+    /* background: #23262d; */
+    background-color: #f8ceec;
+    background-image: linear-gradient(135deg, #f8ceec 0%, #a88beb 74%);
+    -webkit-transform : rotateY(-180deg);
+    -ms-transform     : rotateY(-180deg);
+    transform         : rotateY(-180deg);
+  }
+  .title{
+      margin-top: 20px;
+  }
+
+  .back{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 80%;
+    height: max-content;
+    margin: auto;
+  }
+  .pic{
+      margin-top:15px;
+  }
+
+  .outer-container{
+      height: 60vh;
+      width: 55vw;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      overflow-y: scroll;
+      margin-top: 20vh;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: #23262d 3px 3px 3px 3px;
+  }

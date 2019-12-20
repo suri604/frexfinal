@@ -1,0 +1,8 @@
+[2019-12-09 09:56:56,742] INFO Accepted socket connection from /127.0.0.1:51964 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2019-12-09 09:56:56,834] INFO Accepted socket connection from /127.0.0.1:51966 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2019-12-09 09:56:56,835] INFO Client attempting to renew session 0x100044a754c0002 at /127.0.0.1:51964 (org.apache.zookeeper.server.ZooKeeperServer)
+[2019-12-09 09:56:56,835] INFO Closed socket connection for client /127.0.0.1:49774 which had sessionid 0x100044a754c0002 (org.apache.zookeeper.server.NIOServerCnxn)
+[2019-12-09 09:56:56,836] INFO Established session 0x100044a754c0002 with negotiated timeout 6000 for client /127.0.0.1:51964 (org.apache.zookeeper.server.ZooKeeperServer)
+[2019-12-09 09:56:56,837] INFO Client attempting to renew session 0x100044a754c0002 at /127.0.0.1:51966 (org.apache.zookeeper.server.ZooKeeperServer)
+[2019-12-09 09:56:56,838] INFO Closed socket connection for client /127.0.0.1:51964 which had sessionid 0x100044a754c0002 (org.apache.zookeeper.server.NIOServerCnxn)
+[2019-12-09 09:56:56,838] INFO Established session 0x100044a754c0002 with negotiated timeout 6000 for client /127.0.0.1:51966 (org.apache.zookeeper.server.ZooKeeperServer)

@@ -1,0 +1,117 @@
+.card-padding {
+  padding: 30px;
+}
+
+.back {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  background-color: #3bb78f;
+background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+
+}
+
+.card-border {
+  padding: 0 !important;
+  border-radius: 20px;
+}
+
+.horizontal-bar {
+  padding-left: 3px;
+  width: 47px;
+  border-radius: 20px 0 0 20px;
+}
+
+.body-details {
+  background-color: #cfd8dc;
+  border-radius: 20px;
+}
+
+.no-outline {
+  outline: none;
+}
+
+.round-20 {
+  border-radius: 20px;
+}
+
+.avatar {
+  height: 40px;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.no-padding {
+  padding: 0;
+  margin: 0
+}
+
+.accent {
+  background-color: #FF9800;
+  color: black;
+}
+
+.primary {
+  background-color: #2E7D32;
+  color: white;
+}
+
+.custom-dialog-container .mat-dialog-container {
+  padding: 0 !important;
+}
+
+.bg-1 {
+  background-image: linear-gradient(to bottom right, #CE93D8, #ef9a9a);
+}
+
+.bg-2 {
+  background-image: linear-gradient(to bottom right, #CE93D8, #81D4FA);
+}
+
+.bg-grey {
+  background-color: #eceff1;
+}
+
+.bg-3 {
+  background-color: #607123;
+  background-image: linear-gradient(314deg, #607123 0%, #95b54c 74%);
+}
+.margin-5{
+  margin: 5px;
+}
+.text-accent{
+  color: #FFEB3B;
+}
+.margin-vert-auto{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.card {
+  background-color: #b8c6db;
+background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+
+}
+
+.margin-horiz-auto{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.green-text{
+  color: #4CAF50
+}
+
+.red-text{
+  color: #f44336
+}
+
+.blue-text{
+  color: #009688;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}

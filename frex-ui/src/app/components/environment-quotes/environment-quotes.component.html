@@ -1,0 +1,30 @@
+<div class="container-fluid" style="padding: 32px">
+    <div class="row mat-headline quicksand justify-content-center" style="color:whitesmoke; text-align: center; font-size: 40px">Environment <b>Freaks</b></div>
+    <div class="row mat-h3 quicksand justify-content-center" style="color:whitesmoke; margin-left: 20px; text-align: center">Rewarding you for Environmental Fovourable choices!</div>
+    <div class="row" style="height: 20px"></div>
+    <div class="row justify-content-lg-start">
+      <mat-card class="col-7 info-card mat-elevation-z24">
+        <div class="mat-h3 quicksand font-weight-bolder" >Tired of Odd-Even, Time to conserve Environment Resoures</div>
+        <div class="mat-h4 quicksand font-weight-bold">Start Travelling using public Transport with frex and earn a wide range of reward points, coupons and vouchers.</div>
+      </mat-card>
+    </div>
+    <div class="row" style="height: 20px"></div>
+    <div class="row justify-content-end">
+      <mat-card class="col-7 info-card mat-elevation-z24">
+        <div class="mat-h3 quicksand font-weight-bolder">A community of like-minded freaks for environment conservation</div>
+        <div class="mat-h4 quicksand font-weight-bold">Get motivated and start competing for the top spots, The more you travel, more are rewards</div>
+      </mat-card>
+    </div>
+    <div class="row" style="height: 20px"></div>
+    <div class="row justify-content-start">
+      <mat-card class="col-7 info-card mat-elevation-z24">
+        <div class="mat-h3 quicksand font-weight-bolder">Keep track!</div>
+        <div class="mat-h4 quicksand font-weight-bold">Maintain a record of your activities, complete daily challenges and win</div>
+      </mat-card>
+    </div>
+    <div class="row" style="height: 20px"></div>
+    <div *ngIf="!isSmall" class="row justify-content-end">
+      <button mat-raised-button (click)="navigate()" class="amber-button">Start Winning!</button>
+    </div>
+  </div>
+  

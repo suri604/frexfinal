@@ -1,0 +1,30 @@
+<div class="container-fluid" style="padding: 32px">
+    <div class="row mat-headline quicksand justify-content-center" style="color: #FFECB3; text-align: center">Volunteer <b>Freaks</b></div>
+    <div class="row mat-h3 quicksand justify-content-center" style="color: white; margin-left: 20px; text-align: center">Rewarding you for healthier choices!</div>
+    <div class="row" style="height: 20px"></div>
+    <div class="row justify-content-lg-start">
+      <mat-card class="col-7 info-card mat-elevation-z24">
+        <div class="mat-h3 quicksand font-weight-bolder">Rewards that fit you!</div>
+        <div class="mat-h4 quicksand font-weight-bold">Start volunteering with frex and earn a wide range of reward points, coupons and vouchers.</div>
+      </mat-card>
+    </div>
+    <div class="row" style="height: 20px"></div>
+    <div class="row justify-content-end">
+      <mat-card class="col-7 info-card mat-elevation-z24">
+        <div class="mat-h3 quicksand font-weight-bolder">A community of like-minded freaks!</div>
+        <div class="mat-h4 quicksand font-weight-bold">Get motivated and start competing for the top spots.</div>
+      </mat-card>
+    </div>
+    <div class="row" style="height: 20px"></div>
+    <div class="row justify-content-start">
+      <mat-card class="col-7 info-card mat-elevation-z24">
+        <div class="mat-h3 quicksand font-weight-bolder">Keep track!</div>
+        <div class="mat-h4 quicksand font-weight-bold">Maintain a record of your events, certificates earned and win</div>
+      </mat-card>
+    </div>
+    <div class="row" style="height: 20px"></div>
+    <div *ngIf="!isSmall" class="row justify-content-end">
+      <button mat-raised-button (click)="navigate()" class="amber-button">Start Freaking!</button>
+    </div>
+  </div>
+  

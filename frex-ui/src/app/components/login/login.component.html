@@ -1,0 +1,101 @@
+<div
+  class="login-wrapper"
+  fxLayoutGap="40px"
+  fxLayout="row"
+  fxLayoutAlign="center center"
+>
+  <mat-card class="box">
+    <mat-card-header>
+      <!-- <mat-card-title>Login</mat-card-title> -->
+      <div
+        class="container"
+        fxLayout="row"
+        fxLayout.xs="column"
+        fxLayoutWrap
+        fxLayoutGap="0.5%"
+        fxLayoutAlign="center"
+      >
+        <div fxFlex="20%">
+          <img
+            alt="Olivia, CareerFoundry Community Hero"
+            class="img-circle"
+            src="../../../assets/profile.png"
+            width="80"
+            height="80"
+          />
+        </div>
+        <div fxFlex="80%">
+          <h1>Welcome</h1>
+          <a> Nice to see you </a>
+        </div>
+      </div>
+    </mat-card-header>
+
+    <form class="example-form" [formGroup]="gradientForm"  novalidate>
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input
+            matInput
+            placeholder="username"
+            formControlName="gradientFormEmailEx"
+          />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input
+            matInput
+            placeholder="email"
+            formControlName="gradientFormEmailExWa"
+          />
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input
+            matInput
+            type="password"
+            placeholder="password"
+            formControlName="gradientFormPasswordEx"
+          />
+        </mat-form-field>
+
+        <div
+          class="container"
+          fxLayout="row"
+          fxLayout.xs="column"
+          fxLayoutWrap
+          fxLayoutGap="0.5%"
+          fxLayoutAlign="center"
+        >
+          <mat-card-footer>
+            <div class="row">
+              <div>
+                <p>
+                  Not a member?
+                  <a href="http://frex.stackroute.io/register">Register</a>
+                </p>
+                <p *ngIf="err" style="color:red;">
+                  Username and Password do not match
+                </p>
+              </div>
+              <div style="width: 50px;"></div>
+              <div>
+                <a href="">Forgot password?</a>
+              </div>
+            </div>
+          </mat-card-footer>
+        </div>
+      </mat-card-content>
+
+       <button
+        mat-stroked-button
+        color="accent"
+        class="btn-block"
+        (click)="onlogin()" 
+      > Login</button>
+      
+       
+      
+    </form>
+  </mat-card>
+</div>
+<div class="bg"></div>

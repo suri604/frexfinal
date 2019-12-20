@@ -1,0 +1,206 @@
+   
+
+
+<!--  
+  <section class="view intro-2">
+    <div class="full-bg-img mask rgba-gradient">
+      <div class="container flex-center">
+        <div class="d-flex align-items-center content-height w-100">
+          <div class="row flex-center pt-5 mt-3 w-100"> -->
+              <!-- <div class="col-12 h-100">
+                  <div class="h-100 card-padding">
+                    <mat-card class="h-100 card-border mat-elevation-z22">
+                      <div class="d-flex flex-grow-1 h-100">
+                        <div class="horizontal-bar h-100 flex-auto flex-column flex-grow-1 d-flex">
+                <div style="height: 10px"></div>
+              <a mat-icon-button class="no-outline" (click)="back()">
+                  <mat-icon>arrow_back</mat-icon>
+                </a>   
+                </div>
+              </div>
+                </mat-card>
+                </div>
+              </div> -->
+   <div class="container-fluid">                           
+<div class="row" style="margin-top: 10px">
+    <!-- <div class="col-md-4 text-center text-md-left mb-5"> -->
+    <div class="card" style="width:25rem; margin-left: 430px">
+      <h5 class="card-header" style="text-align: center; color: white">Ticket Details</h5>
+        <div class="card-body">
+          <form [formGroup]="formTemplate">
+            <!-- <div class="text-center">
+              <img [src]="imgSrc" accept="image/*" width="320px" height="150px" (click)="fileUploader.click()">
+            </div>
+            <div class="form-group">
+              <label style="color: white">Select file to upload</label>
+              <input type="file" accept="image/*" class="form-control" #fileUploader formControlName="imageUrl"
+                (change)="showPreview($event)">
+              <div class="text-danger" *ngIf="isSubmitted && formControls.imageUrl.errors?.required">This field is required.
+              </div>
+            </div> -->
+            <div class="text-center">
+              <img [src]="imgSrc" width="320px" height="150px" (click)="fileUploader.click()">
+            </div>
+            <div class="form-group">
+              <label style="color: white">Select image to upload</label>
+              <input type="file" accept="image/*" class="form-control" #fileUploader formControlName="imageUrl"
+                (change)="showPreview($event)">
+              <div class="text-danger" *ngIf="isSubmitted && formControls.imageUrl.errors?.required">This field is required.
+              </div>
+            </div>
+            <div class="form-group">
+              <input class="form-control" formControlName="caption" placeholder="Gov/Private Corporation">
+              <div class="text-danger" *ngIf="isSubmitted && formControls.caption.errors?.required">This field is required.
+              </div>
+            </div>
+            <div class="form-group">
+              <select formControlName="category" class="form-control">
+                <option value="bus">Bus Ticket</option>
+                <option value="train">Train Ticket</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <!-- <div class="form-row">
+              <div class="form-group col-md-6">
+                <a routerLink="/environment/main/save/image/list" class="btn btn-primary btn-block float-right">Ticket Gallery</a>
+              </div>
+              <div class="form-group col-md-6">
+                <button type="submit" class="btn btn-success btn-block float-right">Submit</button>
+              </div>
+            </div> -->
+            <form [formGroup]="form" >
+              <div class="form-group">
+                  <input type="number" formControlName="ticketNumber" placeholder="Unique TicketNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.ticketNumber.errors }" />
+                  <div *ngIf="submitted && f.ticketNumber.errors" class="text-danger">
+                      <div *ngIf="f.ticketNumber.errors.required">TicketNumber is required</div>
+                      <div *ngIf="f.ticketNumber.errors.ticketNumber">TicketNumber must be a valid positive integer</div>
+                  </div>
+                  </div>
+                  <div class="form-group">
+                      <input type="number" formControlName="price" placeholder="Price on Ticket" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
+                      <div *ngIf="submitted && f.price.errors" class="text-danger">
+                          <div *ngIf="f.price.errors.required">price is required</div>
+                          <div *ngIf="f.price.errors.price">price must be a valid positive integer</div>
+                      </div>
+                      
+                      </div>
+                      <div class="form-group">
+                          <input type="date" formControlName="date" placeholder="Date of journey" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" [value]="demoDate" style="width:360px">
+                          <div *ngIf="submitted && f.date.errors" class="text-danger">
+                            <div *ngIf="f.date.errors.required">price is required</div>
+                            <div *ngIf="f.date.errors.price">price must be a valid positive integer</div>
+                        </div>
+                        </div>
+                      <div class="form-group">
+                          <input type="number" formControlName="distance" placeholder="Distance Travelled" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.distance.errors }" />
+                          <div *ngIf="submitted && f.distance.errors" class="text-danger">
+                              <div *ngIf="f.distance.errors.required">Distance is required</div>
+                              <div *ngIf="f.distance.errors.distance">Distance must be a valid number</div>
+                          </div>
+                          </div>
+                          <!-- <div class="form-group form-check">
+                              <input type="checkbox" formControlName="acceptTerms" id="acceptTerms" class="form-check-input" [ngClass]="{ 'is-invalid': submitted && f.acceptTerms.errors }" />
+                              <label for="acceptTerms" class="form-check-label">Accept Terms & Conditions</label>
+                              <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">Accept Ts & Cs is required</div>
+                          </div> -->
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <a routerLink="/environment/main/save/image/list" class="btn btn-primary btn-block float-right">Image Gallery</a>
+                            </div>
+                            <div class="form-group col-md-6">
+                              <button type="submit" class="btn btn-success btn-block float-right" (click)="finalSubmit(formTemplate.value)" >Submit</button>
+                            </div>
+                          </div>
+                          <div class="form-row">  
+       
+                          <div class="form-group col-md-6">
+                              <button class="btn btn-secondary btn-block float-right" type="reset" (click)="finalReset()">Reset</button>
+                          </div>
+                          <div class="col-md-6">
+                            <a routerLink="/environment/main" class="btn btn-primary btn-block float-right">Go back</a>
+                          </div> 
+                          </div>
+                          
+                          </form >
+            
+          </form>
+          <div class="col-md-12">
+            <a routerLink="/environment/main/getTicket" class="btn btn-primary btn-block float-right">View Uploaded Tickets</a>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+</div>
+   </div>
+   
+      
+     
+      <!-- <div class="col-md-4 text-center text-md-left mb-5">
+            <div class="card" style="width:25rem">
+                <h5 class="card-header" style="text-align: center">Ticket Details</h5>
+                <div class="card-body">
+                    <form [formGroup]="form" >
+                            <div class="form-group">
+                                <label>TicketNumber</label>
+                                <input type="number" formControlName="ticketNumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.ticketNumber.errors }" />
+                                <div *ngIf="submitted && f.ticketNumber.errors" class="text-danger">
+                                    <div *ngIf="f.ticketNumber.errors.required">TicketNumber is required</div>
+                                    <div *ngIf="f.ticketNumber.errors.ticketNumber">TicketNumber must be a valid positive integer</div>
+                                </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Price</label>
+                                    <input type="number" formControlName="price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
+                                    <div *ngIf="submitted && f.price.errors" class="text-danger">
+                                        <div *ngIf="f.price.errors.required">price is required</div>
+                                        <div *ngIf="f.price.errors.price">price must be a valid positive integer</div>
+                                    </div>
+                                    
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Date</label><br>
+                                        <input type="date" formControlName="date" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" [value]="demoDate" style="width:360px">
+                                        <div *ngIf="submitted && f.date.errors" class="text-danger">
+                                          <div *ngIf="f.date.errors.required">price is required</div>
+                                          <div *ngIf="f.date.errors.price">price must be a valid positive integer</div>
+                                      </div>
+                                      </div>
+                                    <div class="form-group">
+                                        <label>Distance</label>
+                                        <input type="number" formControlName="distance" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.distance.errors }" />
+                                        <div *ngIf="submitted && f.distance.errors" class="text-danger">
+                                            <div *ngIf="f.distance.errors.required">Distance is required</div>
+                                            <div *ngIf="f.distance.errors.distance">Distance must be a valid number</div>
+                                        </div>
+                                        </div>
+                                        <div class="form-group form-check">
+                                            <input type="checkbox" formControlName="acceptTerms" id="acceptTerms" class="form-check-input" [ngClass]="{ 'is-invalid': submitted && f.acceptTerms.errors }" />
+                                            <label for="acceptTerms" class="form-check-label">Accept Terms & Conditions</label>
+                                            <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">Accept Ts & Cs is required</div>
+                                        </div>
+                                        <div class="form-row">  
+                                        <div class="form-group col-md-6">
+                                            <button class="btn btn-success btn-block float-right" type="submit" (click)="Submit()">Save</button>
+                                            </div>
+                                              
+                                        <div class="form-group col-md-6">
+                                            <button class="btn btn-secondary btn-block float-right" type="reset" (click)="onReset()">Cancel</button>
+                                        </div>
+                                        </div>
+                                        
+                                        </form >
+                                        <div class="col-md-12">
+                                          <a routerLink="/environment/main/getTicket" class="btn btn-primary btn-block float-right">History</a>
+                                        </div>  
+                </div>
+            </div>
+            
+           </div>
+           </div> -->
+            
+          <!-- </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+

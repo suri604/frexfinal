@@ -1,0 +1,76 @@
+<div class="h-100" style="padding-top: 10px; padding-bottom: 10px; padding-right: 5px">
+    <mat-card class="card mat-elevation-z24" style="height: 100%;">
+      <div class="container h-100">
+        <div class="row">
+          <button mat-icon-button *ngIf="!navigated" (click)="onBackPressed()"><mat-icon>arrow_back</mat-icon></button>
+          <!-- <button mat-flat-button>Profile</button>
+          <button mat-flat-button>Settings</button> -->
+          <div class="d-flex flex-grow-1"></div>
+        <img class="avatar" src="../../../assets/env.svg" alt="avatar">
+        </div>
+        <div class="row" style="height: 20px"></div>
+        <div class="quicksand row margin-10 mat-headline highlight">
+          <span class="box">Your Activities</span>
+        </div>
+        <!-- <a routerLink= "/environment/main" style="text-decoration: none"> 
+        <div class="row justify-content-center">
+          <div *ngFor="let activity of actitivites" class="col-10 col-sm-6 ">
+            <div class="h-100" style="padding: 10px">
+              <mat-card matRipple class="d-flex flex-column card h-100 mat-elevation-z12">
+                <img class="img-fluid card-img" [src]="activity.img">
+                <div class="row flex-grow-1 fill-remaining-space"></div>
+                <div class="mat-h3 quicksand margin-10">{{activity.title}}</div>
+              </mat-card>
+            </div>
+          </div>
+        </div>
+        </a> -->
+        <div class="row justify-content-center">
+          <div  class="col-md-4">
+            <!-- <div class="h-100" style="padding: 10px"> -->
+              <mat-card (click)="gomain()" matRipple class="d-flex flex-column card h-100 mat-elevation-z12">
+                <img class="img-fluid card-img" src="../../../assets/public.svg">
+                <div class="row flex-grow-1 fill-remaining-space"></div>
+                <div class="mat-h3 quicksand margin-10">Public transport</div>
+              </mat-card>
+            <!-- </div> -->
+            </div>
+          <div class="col-md-4">
+            <!-- <div class="h-100" style="padding: 10px"> -->
+              <mat-card matRipple class="d-flex flex-column card h-100 mat-elevation-z12" (click)="gocleanmain()">
+                <img class="img-fluid card-img" src="../../../assets/throw.svg">
+                <div class="row flex-grow-1 fill-remaining-space"></div>
+                <div class="mat-h3 quicksand margin-10">Your Activity</div>
+              </mat-card>
+              </div>
+            <!-- </div> -->
+            <div class="col-md-4">
+              <!-- <div class="h-100" style="padding: 10px"> -->
+                <mat-card matRipple class="d-flex flex-column card h-100 mat-elevation-z12" (click)="gofeed()">
+                  <img class="img-fluid card-img" src="../../../assets/donate.svg">
+                  <div class="row flex-grow-1 fill-remaining-space"></div>
+                  <div class="mat-h3 quicksand margin-10">Reward Others</div>
+                </mat-card>
+          
+          </div>
+        </div>
+
+        <div class="row" style="height: 20px"></div>
+        <div class="quicksand row margin-10 mat-headline highlight">
+          <span class="box">Dashboards</span>
+        </div>
+        <div class="row justify-content-center">
+          <div *ngFor="let action of actions" class="col-10 col-sm-6 col-xs-6">
+            <div (click)="clicker(action.title)" class="h-100" style="padding: 10px">
+              <mat-card [ngStyle]="{'background-color': action.color}" matRipple class="d-flex flex-column card h-100 mat-elevation-z12">
+                <img class="img-fluid card-img" [src]="action.img">
+                <div class="row flex-grow-1 fill-remaining-space"></div>
+                <div class="mat-h3 quicksand margin-10">{{action.title}}</div>
+              </mat-card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+  

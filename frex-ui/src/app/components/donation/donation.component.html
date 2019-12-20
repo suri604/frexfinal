@@ -1,0 +1,127 @@
+<body>
+ 
+<div class="container" [hidden]="submitted">
+    
+    <h1>Donate for a change!</h1>
+    <div class = "appeal">
+      <p>Unlike many software organisations, we made a choice to keep all of our software independent, free and available for everyone. We believe that each of us, around the world, deserves access to high quality web applications with no ads and no tracking, respectful of your privacy. If you’re able to, please support Frex today from as little as 1 Rupee.</p>
+    </div>
+    <form (ngSubmit)="onSubmit()" #donForm="ngForm"  >
+      <div class="form-group">
+        <label for="name">Name</label>
+       
+        <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name" 
+        #name="ngModel" >
+       
+        <div [hidden]="name.valid || name.pristine"
+        class="alert alert-danger">
+     Name is required
+   </div>
+      </div>
+
+      <div class="form-group">
+        <label for="emailid">Email ID</label>
+        <input type="email" [email]="true" class="form-control" id="emailid" required [(ngModel)]="model.emailid" name="emailid"
+        #emailid="ngModel"> 
+        
+        <div [hidden]="emailid.valid || emailid.pristine"
+        class="alert alert-danger">
+     Email ID is required
+   </div>
+      </div>
+
+      <!-- <div class="form-group">
+        <mat-form-field>
+          <input matInput placeholder="Enter your email" [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      </div> -->
+      
+
+      <div class="form-group">
+        <label for="phonenumber">Phone Number</label>
+        <input type="tel" class="form-control" id="phonenumber" minlength="10" maxlength="10" required [(ngModel)]="model.phonenumber" name="phonenumber"
+        #phonenumber="ngModel">
+        <div [hidden]="phonenumber.valid || phonenumber.pristine"
+        class="alert alert-danger">
+     Phone Number is required
+   </div>
+      </div>
+      <!-- <div class="form-group">
+          <label for="country">Country</label>
+          <select class="form-control" id="country"
+                  required
+                  [(ngModel)]="model.country" name="country"
+                  #country="ngModel" style="height: 34px;">
+            <option *ngFor="let pow of countries" [value]="pow">{{pow}}</option>
+          </select>
+          <div [hidden]="country.valid || country.pristine" class="alert alert-danger">
+            Country is required
+          </div>
+        </div> -->
+
+      <div class="form-group">
+        <label for="amount">Amount (In Rupees)</label>
+        <!-- <select class="form-control" id="amount"
+                required
+                [(ngModel)]="model.amount" name="amount"
+                #amount="ngModel" style="height: 34px;">
+          <option *ngFor="let pow of denotations" [value]="pow">{{pow}}</option>
+        </select> -->
+        <div class="input-group">
+            <span class="input-group-addon"><strong>₹</strong></span>
+        <input type="number" class="form-control" id="amount" minlength="1" maxlength="10" required [(ngModel)]="model.amount" name="amount"
+        #amount="ngModel">
+        <div [hidden]="amount.valid || amount.pristine" class="alert alert-danger">
+          Amount is required
+        </div>
+        </div>
+      </div>
+
+     
+      <div class="cnow">
+      <button type="submit" class="btn btn-success"[disabled]="!donForm.form.valid" style="margin-left: 40%; height:50px; background-color: green; padding-top: 10px
+      ;" >Contribute Now</button>
+      </div>
+    </form>
+
+</div>
+<!-- <div class="container1" [hidden]="!checkout" >
+    <input type="number" [(ngModel)]="finalAmount">
+    <div id = "paypal-checkout-btn"></div>
+  
+</div> -->
+
+
+<div class="confirm" [hidden]="!submitted" style="color:antiquewhite">
+        <div class="col-12">
+    <h2>You submitted the following:</h2>
+    <div class="row">
+      <div class="col-xs-3">Name</div>
+      <div class="col-xs-9">{{ model.name }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Email ID</div>
+      <div class="col-xs-9">{{ model.emailid }}</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3">Phone Number</div>
+        <div class="col-xs-9">{{ model.phonenumber }}</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">Amount in Rupees</div>
+        <div class="col-xs-9"><strong>₹</strong> {{ model.amount }}</div>
+      </div>
+    <!-- <div class="row">
+      <div class="col-xs-3">Country</div>
+      <div class="col-xs-9">{{ model.country }}</div>
+    </div> -->
+    <br>
+    <div class ="row">
+      <div id = "paypal-checkout-btn"></div>
+    </div>
+    <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+  </div>
+</div>
+
+</body>

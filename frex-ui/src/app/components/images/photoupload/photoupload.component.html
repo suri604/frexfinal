@@ -1,0 +1,85 @@
+<div id="top">
+    <div class="container">
+        <h1 id="headingfont">
+          Frex Upload
+        </h1>
+       </div>
+  <!-- button -->
+  <div class="container" id="tryme"  >
+      <div class="row">
+          
+      <button  routerLink="/globaldashboard" class="btn btn-outline-danger btn-lg navigation">Dashboard </button>
+      <!-- <button routerLink="/image/upload" class="btn btn-outline-danger btn-lg navigation">Upload</button> -->
+      <button routerLink="/image/feed" class="btn btn-outline-danger btn-lg navigation">Feed </button>
+      <button routerLink="/environment/home" class="btn btn-outline-danger btn-lg navigation"> Environment</button>
+      <button routerLink="/fitness/Dashboard" class="btn btn-outline-danger btn-lg navigation" > Fitness</button>
+      <button routerLink="/volunteer/dashboard" class="btn btn-outline-danger btn-lg navigation"> volunteer</button>
+      
+    </div>
+    </div>
+  <!-- button ending -->
+<div class="container" id="upload">
+  <section class="product">
+    <div class="product__details">
+      <h1 class="product__details-heading">FREX</h1>
+      <span class="product__details-sub-heading">PHOTOGRAPHY</span>
+
+      <div class="product__details-image-wrapper">
+        <img class="product__details-image" src="https://image.ibb.co/nFfzRK/phantom_3_standard.png" alt="">
+      </div>
+
+     
+    </div>
+
+    <form class="card-details" action="" data-form [formGroup]="formTemplate" (submit)="onSubmit(formTemplate.value)">
+      <fieldset class="card-details__fieldset">
+          <div class="text-center ">
+            <img [src]="imgSrc" width="350px" height="250px" (click)="fileUploader.click()" class="">
+          </div>
+          
+          <div class="form-group">
+            <!-- <label>Select file to upload</label> -->
+            <input type="file" accept="image/*" class="form-control card-details__holder-input" #fileUploader formControlName="imageUrl"
+              (change)="showPreview($event)">
+            <div class="text-danger" *ngIf="isSubmitted && formControls.imageUrl.errors?.required">This field is
+              required.
+            </div>
+          </div>
+          <div class="form-group">
+            
+            <input class="form-control card-details__holder-input" formControlName="caption" placeholder="Caption">
+            <div class="text-danger" *ngIf="isSubmitted && formControls.caption.errors?.required">This field is
+              required.
+            </div>
+          </div>
+
+      </fieldset>
+
+      <fieldset class="card-details__fieldset">
+        <div class="form-group">
+          <select formControlName="category" class="form-control">
+            <option value="Landscape Photo">Landscape Photo
+              </option>
+            <option value="Portrait">Portrait Photo</option>
+            <option value="Wildlife">Wildlife Photo</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <a routerLink="/image/list" class="btn btn-danger btn-block float-right">Go To Gallery</a>
+          </div>
+          <div class="form-group col-md-6">
+            <!-- <h1 class="form-control" formControlName="userid">{{username}}</h1> -->
+            <button type="submit" class="btn btn-danger btn-block float-right">Submit</button>
+          </div>
+        </div>
+
+      </fieldset>
+
+      <!-- <button class="card-details__submit" type="submit" data-submit-button>Purchase</button> -->
+    </form>
+  </section>
+  
+
+</div>
+</div>

@@ -1,0 +1,8 @@
+[2019-12-12 17:21:15,320] INFO Expiring session 0x10002189d7d0010, timeout of 6000ms exceeded (org.apache.zookeeper.server.ZooKeeperServer)
+[2019-12-12 17:21:37,290] WARN Unable to read additional data from client sessionid 0x10002189d7d0010, likely client has closed socket (org.apache.zookeeper.server.NIOServerCnxn)
+[2019-12-12 17:21:58,957] INFO Processed session termination for sessionid: 0x10002189d7d0010 (org.apache.zookeeper.server.PrepRequestProcessor)
+[2019-12-12 17:22:23,072] INFO Closed socket connection for client /127.0.0.1:58346 which had sessionid 0x10002189d7d0010 (org.apache.zookeeper.server.NIOServerCnxn)
+[2019-12-12 17:22:46,842] WARN fsync-ing the write ahead log in SyncThread:0 took 1724ms which will adversely effect operation latency. See the ZooKeeper troubleshooting guide (org.apache.zookeeper.server.persistence.FileTxnLog)
+[2019-12-12 17:23:25,753] INFO Accepted socket connection from /127.0.0.1:60886 (org.apache.zookeeper.server.NIOServerCnxnFactory)
+[2019-12-12 17:24:11,773] INFO Client attempting to renew session 0x10002189d7d0010 at /127.0.0.1:60886 (org.apache.zookeeper.server.ZooKeeperServer)
+[2019-12-12 17:24:21,191] INFO Invalid session 0x10002189d7d0010 for client /127.0.0.1:60886, probably expired (org.apache.zookeeper.server.ZooKeeperServer)

@@ -1,0 +1,38 @@
+// @import '../../../variables';
+
+// .container{
+//     height: 100vh;
+// }
+// h2{
+//     color: $secondary;
+//     margin-bottom: 1em;
+// }
+// .form-wrapper{
+//     min-width: 40%;
+//     margin-bottom: 10%;
+//     border: 2px solid $light-grey;
+//     padding: 1em 2em;
+// }
+
+@import '../../../../../variables';
+
+h2 {
+    color: $secondary;
+    margin-bottom: 1em;
+}
+
+.form-wrapper {
+    min-width: 40%;
+    margin-bottom: 10%;
+    border: 1px solid $light-grey;
+    padding: 1em 2em;
+    box-shadow: 0 15px 20px $light-grey;
+}
+.container-wrapper{
+    background-image: url(https://lh4.googleusercontent.com/-XplyTa1Za-I/VMSgIyAYkHI/AAAAAAAADxM/oL-rD6VP4ts/w1184-h666/Android-Lollipop-wallpapers-Google-Now-Wallpaper-2.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}

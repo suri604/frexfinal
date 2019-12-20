@@ -1,0 +1,28 @@
+
+<div class="container-fluid">
+    <a mat-icon-button class="no-outline" (click)="back()">
+        <mat-icon>arrow_back</mat-icon>
+      </a>
+<table mdbTable>
+    <thead class="grey white-text">
+      <tr>
+        <th scope="col"><h4>TicketNumber</h4></th>
+        <th scope="col"><h4>Price on Ticket</h4></th>
+        <th scope="col"><h4>Date of Journey</h4></th>
+        <th scope="col"><h4>Distance Travelled</h4></th>
+        <th scope="col"><h4>Delete</h4></th>
+      </tr>
+    </thead>
+    <tbody *ngFor = "let a of ticketList">       
+      <tr>
+        <td scope="row">{{a.ticketNumber}}</td>
+        <td>{{a.price}}</td>
+        <td>{{a.date |  date:'longDate'}}</td>
+        <td>{{a.distance}}</td>
+        <td><button class="btn" (click)="deleteticket(a.ticketNumber)"><i class="fa fa-trash"></i></button></td>
+        <!-- star column -->
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  

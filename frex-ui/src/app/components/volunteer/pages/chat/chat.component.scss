@@ -1,0 +1,18 @@
+.bg {
+  // background-image: linear-gradient(to bottom right, #42d680, rgb(182, 134, 126));
+  background-color: #FFCC80;
+  background-image: linear-gradient(to bottom right, #FFCC80, #FFAB91);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+}
+
+.new_message {
+  position: fixed;
+  bottom: 0;
+  left: 28.2vw;
+  width: 72%;
+}

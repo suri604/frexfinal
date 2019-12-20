@@ -1,0 +1,85 @@
+<div class="container-fluid">
+  <h1 style="text-align: center;color: black;">Donate For Good Deeds of Others</h1>
+<div *ngIf="imageList">
+  <div class="row">
+       <div *ngFor="let i of rowIndexArray" class="col-4">
+         <div class="h-100" style="padding: 10px">
+           <mat-card matRipple class="d-flex flex-column card h-100 mat-elevation-z12" *ngIf="i==0">
+             <a routerLink="/environment/cleanindia/upload" style="text-decoration: none"><img class="img-fluid card-img" src="../../../../assets/up.svg">
+             <div class="row flex-grow-1 fill-remaining-space"></div>
+             <h3 class="mat-h3 quicksand margin-10" style="text-align: center">Upload Your Activity</h3></a>
+           </mat-card>
+            <mat-card matRipple class="d-flex flex-column card h-100 mat-elevation-z12" *ngIf="i!=0">
+                   <img class="img-fluid card-img" [src]="imageList[i].imageUrl"> 
+                   <div class="row flex-grow-1 fill-remaining-space"></div>
+                   <h4>Reciever's Username</h4>
+                   <div class="mat-h3 quicksand margin-10">{{imageList[i].name}}</div>
+                   <h4>Activity Description</h4>
+                   <div class="mat-h3 quicksand margin-10">{{imageList[i].description}}</div>
+                   <!-- <div class="form-group">
+                    <div class="col-md-12">
+                     <a routerLink="/environment/main/save/envcategory" class="btn btn-primary btn-block float-right">Donate your Points</a>
+                   </div>
+                   </div> -->
+                   <button type="button" mdbBtn color="default" rounded="true" data-toggle="modal" data-target="#basicExample"
+        (click)="frame.show()" mdbWavesEffect>Donate Points
+</button>
+
+<div mdbModal #frame="mdbModal" class="modal fade left" id="frameModalTop" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Good Deeds for Good Deeds</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <form [formGroup]="form">
+          <div class="form-group">
+          <input type="text" id="form3" class="form-control" formControlName="reciever"
+                 mdbInput mdbValidate>
+          <label for="form3">username</label>
+          </div>
+          <!-- <mdb-error
+            *ngIf="subscriptionFormModalName.invalid && (subscriptionFormModalName.dirty || subscriptionFormModalName.touched)">
+            Input invalid
+          </mdb-error>
+          <mdb-success
+            *ngIf="subscriptionFormModalName.valid && (subscriptionFormModalName.dirty || subscriptionFormModalName.touched)">
+            Input valid
+          </mdb-success> -->
+       
+          <div class="form-group">
+          <input type="number" id="form2" class="form-control" formControlName="point"
+                 mdbInput mdbValidate>
+          <label for="form2">Donate Points</label>
+          </div>
+          <!-- <mdb-error
+            *ngIf="subscriptionFormModalPoints.invalid && (subscriptionFormModalPoints.dirty || subscriptionFormModalPoints.touched)">
+            Input invalid
+          </mdb-error>
+          <mdb-success
+            *ngIf="subscriptionFormModalPoints.valid && (subscriptionFormModalPoints.dirty || subscriptionFormModalPoints.touched)">
+            Input valid
+          </mdb-success> -->
+
+      
+      <div class="modal-footer d-flex justify-content-center">
+        <button mdbBtn color="indigo" class="waves-light" mdbWavesEffect (click)="onSubmit()">Donate
+        </button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+           </mat-card> 
+           
+           
+         </div>
+       </div>
+     </div> 
+     </div>
+     </div>

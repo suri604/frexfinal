@@ -1,0 +1,25 @@
+<h2>Filters</h2>
+<h4>Category</h4>
+<select [(ngModel)]="category" (change)="filterExact('category', category)">
+    <option value="bus">Bus Ticket</option>
+    <option value="train">Train Ticket</option>
+    <option value="other">Other</option>
+
+</select>
+<button *ngIf="category"
+        (click)="removeFilter('category')">
+  Remove filter
+</button>
+
+<h2>Ticket-Photos</h2>
+<div>{{filteredCategories.length}}</div>
+<div *ngFor="let category of filteredCategories">
+  <h6>{{category.category}}</h6>
+      <div class="imagebox">
+        <img [src]="category.imageUrl" class="img-fluid">
+        <span class="imagebox-desc">{{category.caption}}</span>
+      </div>
+  <ul>
+    <li>Category: {{category.category}}</li>
+  </ul>
+</div>

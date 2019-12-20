@@ -1,0 +1,95 @@
+.details-container,
+.verification {
+  display: flex;
+  flex-direction: column;
+}
+.outermost {
+  background-color: #f8ceec;
+  background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+}
+
+.bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background-color: #f8ceec;
+  background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+}
+
+.details-container > * {
+  border-radius: 30px;
+  background: white;
+  width: 90%;
+  padding-left: 10%;
+  /* padding-right: -5%; */
+}
+
+h2 {
+  text-align: center;
+  font-family: "Arial";
+}
+button {
+  width: 40%;
+  margin-left: 30%;
+}
+#ppic{
+    align-content: center;
+    border-radius: 50%; 
+    max-width: 150px;
+    height: 150px;
+    /* background: no-repeat; */
+
+    background-image: url('../../../assets/img_avatar_update.png');
+    
+
+
+}
+
+.image-preview {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 150px;
+
+  margin-top: 15 px;
+  background: 50% 50% no-repeat;
+}
+
+img{
+  /* background: #CCC url('https://firebasestorage.googleapis.com/v0/b/userprofile-6a14e.appspot.com/o/images%2Fimg_avatar.png?alt=media&token=ab0f0c59-8ce8-4391-80ef-282d717afe17') 0 0 no-repeat!important; */
+  /* background-image: url('https://www.w3schools.com/howto/img_avatar.png'); */
+
+  text-indent: -9999px;
+  object-fit: cover;
+  /* border: 15px solid #fff; */
+  color: transparent!important;
+  -webkit-appearance: none!important;
+}
+
+.thumb { 
+/* background: 25% 25% no-repeat; */
+width: 250px;
+/* max-width: 250px; */
+height: 250px;
+/* background-attachment: inherit; */
+}
+
+.outer {
+  border-radius: 30px;
+  background: white;
+  margin-left: 20%;
+  margin-top: 20px;
+  min-width: 300px;
+  /* margin:5vw 0 0 8vw; */
+  /* margin-top: 10px; */
+  margin-right: 20%;
+  margin-bottom: 20px;
+  float: left;
+  width: 60%;
+  padding: 3vw;
+  /* height:37vw; */
+  /* background: black; */
+  box-shadow: 3px 3px 8px 5px #888888;
+}
